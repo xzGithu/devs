@@ -1,0 +1,42 @@
+{% extends "res_list.html" %}
+{% block search %}
+
+    <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="host_name" >主机名</span>
+                         <!-- 如果之前已经写入了node_name的信息，那么页面重新加载后保留-->
+                            <input type="text" class="form-control" placeholder="" aria-describedby="host_name" name="host_name"
+                                    {% if request.GET.node_name %}value = {{ request.GET.node_name }}{% endif %}>
+                        </div>
+                     </div>
+
+                     <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="host">主机ip</span>
+                            <input type="text" class="form-control" placeholder="" aria-describedby="host" name = "host"
+                                    {% if request.GET.node_address %}value = {{ request.GET.node_address }}{% endif %}>
+                        </div>
+                     </div>
+
+
+
+{% endblock %}
+
+{% block table_tr %}
+
+<th>主机名</th>
+<th>主机ip</th>
+<th>主机端口</th>
+<th>用户</th>
+<th>密码</th>
+
+
+{% endblock %}
+{% block table_td %}
+<td>{{item.host_name}}</td>
+<td>{{item.host}}</td>
+<td>{{item.port}}</td>
+<td>{{item.usr}}</td>
+<td>{{item.pwd}}</td>
+
+{% endblock %}

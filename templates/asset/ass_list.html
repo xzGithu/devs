@@ -1,0 +1,46 @@
+{% extends "asset/resass_list.html" %}
+{% block search %}
+
+    <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="node_name" >hostname</span>
+                         <!-- 如果之前已经写入了node_name的信息，那么页面重新加载后保留-->
+                            <input type="text" class="form-control" placeholder="" aria-describedby="hostname" name="hostname"
+                                    {% if request.GET.node_name %}value = {{ request.GET.node_name }}{% endif %}>
+                        </div>
+                     </div>
+
+                     <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="node_address">ip</span>
+                            <input type="text" class="form-control" placeholder="" aria-describedby="ip" name = "ip"
+                                    {% if request.GET.node_address %}value = {{ request.GET.node_address }}{% endif %}>
+                        </div>
+                     </div>
+
+
+
+{% endblock %}
+
+{% block table_tr %}
+
+<th>ip</th>
+<th>hostname</th>
+<th>cpu_number</th>
+<th>kernel</th>
+<th>model</th>
+<th>disk_total</th>
+<th>ram_total</th>
+
+
+{% endblock %}
+{% block table_td %}
+<td>{{item.ip}}</td>
+<td>{{item.hostname}}</td>
+<td>{{item.cpu_number}}</td>
+<td>{{item.kernel}}</td>
+<td>{{item.model}}</td>
+<td>{{item.disk_total}}</td>
+<td>{{item.ram_total}}</td>
+
+{% endblock %}

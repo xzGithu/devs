@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+{% block page_css %}
+{% endblock %}
+<!--填充导航栏的页面名称-->
+{% block page_title %}
+
+{% endblock %}
+{% block container %}
+<div class="row">
+        <div class="col-md-6">
+            <form class="form-inline" role="form" method="POST"> {% csrf_token %}
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td>主机ip：</td>
+                    <td>{{ form.ips|safe }}</td>
+                </tr>
+                <tr>
+                    <td>用户名：</td>
+                    <td>{{ form.user|safe }}</td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td>{{ form.pwd|safe }}</td>
+                </tr>
+                <tr>
+                    <td>执行命令：</td>
+                    <td><div class="form-group">
+                            {{ form.comm|safe }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><center><button type="submit" class="btn btn-info">执行</button></center></td>
+                </tr>
+            </table>
+
+            </form>
+            </div>
+    </div>
+            {% if result %}
+        <hr>
+        <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-heading">执行结果:</h3>
+            </div>
+            <div class="panel-body">
+                <pre><core>{{ result }}</core></pre>
+            </div>
+        </div>
+        </div>
+    {% endif %}
+{% endblock %}

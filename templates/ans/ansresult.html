@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block page_css %}
+{% endblock %}
+<!--填充导航栏的页面名称-->
+{% block page_title %}
+
+{% endblock %}
+{% block container %}
+<div class="row">
+        <div class="col-md-6">
+            <form class="form-inline" role="form" method="POST"> {% csrf_token %}
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td>主机ip：</td>
+                    <td>{{ form.ips|safe }}</td>
+                </tr>
+                <tr>
+                    <td>模块：</td>
+                    <td><div class="form-group">
+                        {{ form.modules|safe }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>参数：</td>
+                    <td>{{ form.arg|safe }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><center><button type="submit" class="btn btn-info">执行</button></center></td>
+                </tr>
+            </table>
+
+            </form>
+            </div>
+    </div>
+            {% if result %}
+        <hr>
+        <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h5 class="panel-heading">执行结果:</h5>
+            </div>
+            <div class="panel-body">
+                <pre><core>{{ result }}</core></pre>
+{#                <pre><core>{{ result }}</core></pre>#}
+{#                {% for key,value in result.items %}#}
+{#                   {{ key }}:{{ value }}#}
+{#                {% endfor %}#}
+            </div>
+            {% elif results %}
+                <hr>
+        <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h5 class="panel-heading">执行结果:</h5>
+            </div>
+            <div class="panel-body">
+                <pre><core>{{ results }}</core></pre>
+
+            </div>
+        </div>
+        </div>
+    {% endif %}
+{% endblock %}

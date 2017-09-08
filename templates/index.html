@@ -1,0 +1,325 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title> 运维管理平台 </title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+        {% include 'head_css.html' %}
+        {% block page_css %}
+        {% endblock %}
+	</head>
+
+	<body class="no-skin">
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="icon-star"></i>
+							运维管理平台
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="{% static 'assets/avatars/user.jpg' %}" alt="Jason's Photo" />
+								<span class="user-info">
+                                <!--判断用户是否已经通过认证，如果通过则显示用户已登陆-->
+                                    {% if user.is_authenticated %}
+                                        用户选项
+                                        <small>{{user.username}}已登录</small>
+                                    {% else %}
+                                        用户选项
+                                    {% endif %}
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                                              {% if user.is_authenticated %}
+                                    <li>
+									<a href="{% url 'logout' %}">
+										<i class="ace-icon fa fa-power-off"></i>
+										注销
+									</a>
+								</li>
+                                    {% else %}
+								<li>
+									<a href="{% url 'login'%}">
+										<i class="ace-icon fa fa-user"></i>
+										登录
+									</a>
+								</li>
+                                {% endif %}
+
+                                <li class="divider"></li>
+                                <li>
+									<a href="{% url 'changepwd' %}">
+										<i class="ace-icon fa fa-cog"></i>
+										更改密码
+									</a>
+								</li>
+
+					        </ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+							<button class="btn btn-success">
+								<i class="icon-signal"></i>
+							</button>
+
+							<button class="btn btn-info">
+								<i class="icon-pencil"></i>
+							</button>
+
+							<button class="btn btn-warning">
+								<i class="icon-group"></i>
+							</button>
+
+							<button class="btn btn-danger">
+								<i class="icon-cogs"></i>
+							</button>
+						</div>
+
+						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+							<span class="btn btn-success"></span>
+
+							<span class="btn btn-info"></span>
+
+							<span class="btn btn-warning"></span>
+
+							<span class="btn btn-danger"></span>
+						</div>
+					</div><!-- #sidebar-shortcuts -->
+
+					<ul class="nav nav-list">
+
+						<li class="active">
+							<!-- <a href="index.html"> -->
+                            <a href="{% url 'index'%}">
+								<i class="icon-dashboard"></i>
+								<span class="menu-text"> 控制台 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 基础信息 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+                                    <a href="{% url 'lists' table='node' %}">
+										<i class="icon-double-angle-right"></i>
+										机房信息
+									</a>
+								</li>
+
+								<li>
+								      <a href="{% url 'lists' table='line' %}">
+										<i class="icon-double-angle-right"></i>
+										线路信息
+									</a>
+								</li>
+                                <li>
+								       <a href="{% url 'lists' table='device' %}">
+										<i class="icon-double-angle-right"></i>
+										设备信息
+									</a>
+								</li>
+							</ul>
+						</li>
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-tasks"></i>
+								<span class="menu-text"> SSH </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+                                    <a href="{% url 'lists' table='host' %}">
+										<i class="icon-double-angle-right"></i>
+										主机列表
+									</a>
+								</li>
+
+								<li>
+								      <a href="{% url 'run_ssh_cmd' %}">
+										<i class="icon-double-angle-right"></i>
+										执行命令
+									</a>
+								</li>
+                                <li>
+								      <a href="{% url 'run_ans_cmd' %}">
+										<i class="icon-double-angle-right"></i>
+										Ansible
+									</a>
+								</li>
+
+							</ul>
+						</li>
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th-large"></i>
+								<span class="menu-text"> 资产列表 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+                                    <a href="{% url 'lists' table='asset' %}">
+										<i class="icon-double-angle-right"></i>
+										资产列表
+									</a>
+								</li>
+
+
+
+							</ul>
+						</li>
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-user"></i>
+								<span class="menu-text"> 用户管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+                                    <a href="{% url 'lists' table='user' %}">
+										<i class="icon-double-angle-right"></i>
+										用户列表
+									</a>
+								</li>
+
+
+
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">{{ page_title }}</a>
+							</li>
+							<li class="active">{{ sub_title }}</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+                        <script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+                        <div class="page-content-area">
+                            <div class="page-header">
+                                    <h1>
+                                        <!--设置导航栏的页面标题-->
+                                        {{ page_title }}
+                                        <small>
+                                            <i class="ace-icon fa fa-angle-double-right"></i>
+                                             <!--设置导航栏的页面子标题-->
+                                            {{ sub_title }}
+                                        </small>
+                                    </h1>
+                                </div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+                                    {% block container %}
+
+                                    {% endblock %}
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+                        </div><!-- /.page-content-area -->
+					</div><!-- /.page-content -->
+                 </div><!-- /.main-content -->
+
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+        {% include 'javascript.html' %}
+        {% block page_javascript %}
+        {% endblock %}
+		<!-- inline scripts related to this page -->
+</body>
+</html>
