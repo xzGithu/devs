@@ -1,4 +1,38 @@
-import json
-data={u'192.168.137.132': u'total 3074\ndr-xr-xr-x.   2 root root     4096 Feb  8  2017 bin\ndr-xr-xr-x.   5 root root     1024 Sep 19  2016 boot\ndrwxr-xr-x.   2 root root     4096 Oct 26  2013 cgroup\ndrwxr-xr-x   18 root root     3720 Sep  4 14:05 dev\ndrwxr-xr-x    8 root root     4096 Aug  2 16:46 devops\ndrwxr-xr-x. 122 root root    12288 Sep  6 16:12 etc\ndrwxr-xr-x.   3 root root     4096 Jan 16  2017 example\ndrwxr-xr-x.   3 root root     4096 Apr 28 12:40 home\ndrwxr-xr-x.   2 root root     4096 Jan 16  2017 iso\ndr-xr-xr-x.  13 root root     4096 Jan 20  2017 lib\ndr-xr-xr-x.   9 root root    12288 Feb  8  2017 lib64\ndrwx------.   2 root root    16384 Sep 19  2016 lost+found\ndrwxr-xr-x.   2 root root     4096 Aug 25 13:47 media\ndrwxr-xr-x    2 root root        0 Sep  4 14:05 misc\ndrwxr-xr-x    2 root root        0 Sep  4 14:05 net\ndrwxr-xr-x.   5 root root     4096 May 18 10:22 opt\ndrwxr-xr-x.   7  501 games    4096 Jan 16  2017 pip-7.1.2\ndr-xr-xr-x  240 root root        0 Sep  4 14:05 proc\ndrwxr-xr-x    3 root root     4096 Sep  1 09:32 pycharm\ndrwxr-xr-x.  18 1000  1000    4096 Jan 16  2017 Python-2.7.6\ndrwxr-xr-x.   2 root root     4096 Jan 13  2017 pythonfile\ndrwxr-xr-x.   3 root root     4096 Mar  6  2017 python-study\ndr-xr-x---.  31 root root     4096 Sep  4 14:06 root\ndr-xr-xr-x.   2 root root    12288 Feb  8  2017 sbin\ndrwxr-xr-x.   2 root root     4096 Sep 19  2016 selinux\ndrwxr-xr-x.   9 root root     4096 Aug 29 10:31 soft\ndrwxr-xr-x.   2 root root     4096 Jun 28  2011 srv\ndrwxr-xr-x   13 root root        0 Sep  4 14:05 sys\ndrwxr-xr-x    6 root root     4096 Aug  2 17:23 tansible\ndrwxr-xr-x    4 root root     4096 Aug  2 17:33 tests\ndrwxrwxrwt.  19 root root     4096 Sep  6 16:46 tmp\ndrwxr-xr-x.   7  501 games    4096 Jan 16  2017 Twisted-16.7.0rc2\n-rwxrw-rw-.   1 root root  2987098 Jan 16  2017 Twisted-16.7.0rc2.tar.bz2\ndrwxr-xr-x.  13 root root     4096 Sep 19  2016 usr\ndrwxr-xr-x.  23 root root     4096 May 18 10:10 var\ndrwxr-xr-x.  12 root root     4096 May 18 10:11 was'}
+import logging
+import time
 
-print data[u'192.168.137.132']
+rq = time.strftime('%Y%m%d',time.localtime(time.time()))
+setting = {
+           'logpath':'d:/',
+           'filename':'xxx_' + rq + '.log'
+           }
+
+class Log(object):
+    ''' '''
+    def __init__(self, name,logname):
+        # self.path = setting['logpath']
+        # self.filename = setting['filename']
+        self.logname=logname
+        self.name = name
+        self.logger = logging.getLogger(self.name)
+        self.logger.setLevel(logging.INFO)
+        self.fh = logging.FileHandler(self.logname)
+        self.fh.setLevel(logging.DEBUG)
+        self.formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(threadName)s - %(name)s - %(message)s')
+        self.fh.setFormatter(self.formatter)
+        self.logger.addHandler(self.fh)
+
+    def info(self, msg):
+        self.logger.info(msg)
+
+    def warning(self, msg):
+        self.logger.warning(msg)
+
+    def error(self, msg):
+        self.logger.error(msg)
+
+    def debug(self, msg):
+        self.logger.debug(msg)
+
+    def close(self):
+        self.logger.removeHandler(self.fh)

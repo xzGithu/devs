@@ -1,4 +1,7 @@
 #!-*-coding:utf-8-*-
+
+
+###ansible api v2
 import json, sys, os
 from collections import namedtuple
 from ansible.parsing.dataloader import DataLoader
@@ -208,6 +211,20 @@ class ANSRunner(object):
         except Exception as e:
             return False
 
+    def get_setmodel_result(self):
+        self.results_raw = {'success': {}, 'failed': {}, 'unreachable': {}}
+        for host, result in self.callback.host_ok.items():
+            self.results_raw['success'][host] = result._result
+
+        for host, result in self.callback.host_failed.items():
+
+            self.results_raw['failed'][host] = result._result
+
+        for host, result in self.callback.host_unreachable.items():
+            self.results_raw['unreachable'][host] = result._result
+
+        return json.dumps(self.results_raw)
+
     def get_model_result(self):
         self.results_raw = {'success': {}, 'failed': {}, 'unreachable': {}}
         for host, result in self.callback.host_ok.items():
@@ -406,27 +423,29 @@ class ANSRunner(object):
 
 if __name__ == '__main__':
     resource = [
-        {"hostname": u"192.168.137.132"},
+        {"hostname": u"192.168.137.153","username":"root","password":"password"},
         {"hostname": u"192.168.1.234"},
         # {"hostname": "192.168.1.233"},
     ]
     rbt = ANSRunner(resource)
-    rbt.run_model(host_list=[u"192.168.137.132",u"192.168.1.234"], module_name='command',
-                  module_args="ls -l ")
-    data = rbt.get_model_result()
+    rbt.run_model(host_list=[u"192.168.137.153",u"192.168.1.234"], module_name='setup',
+                  module_args=" ")
+    data = rbt.get_setmodel_result()
     print data
-    for k, v in json.loads(data).items():
-        if len(v) == 0:
-            pass
-        else:
+    result = rbt.handle_cmdb_data(data)[0]
+    print result
+#    for k, v in json.loads(data).items():
+#        if len(v) == 0:
+#            pass
+#        else:
 
 
-            print k,len(v)
+#            print k,len(v)
             # print json.loads(v)
-            result = v
-            results = k
-            print results
-            print result
+#            result = v
+#            results = k
+#            print results
+#            print result
             # print result['192.168.137.132']
     # rbt.run_playbook(host_list=[u"192.168.137.132"],playbook_path="/soft/ansapi/test.yml",extra_vars=None)
     # datas = rbt.get_playbook_result()

@@ -1,27 +1,19 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import render,redirect,get_object_or_404,render_to_response
-from models import *
-from forms import *
+from django.shortcuts import render,redirect,get_object_or_404
+from .models import *
 from django.db import IntegrityError
 from django.http import JsonResponse,HttpResponse,HttpResponseRedirect
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.contrib.auth import views,authenticate
 from django.contrib.auth.decorators import login_required
-import paramiko,paramiko_client,ConfigParser
-from django.views.generic.edit import FormView
-from api_v2 import ANSRunner
-import json
-from django.contrib.auth.models import User
-
+import paramiko
+# from django.views.generic.edit import FormView
 # from api_v2 import ANSRunner
-# Create your views here.
-
-# raw_data = ''
-# list_template=''
-# form = ''
-# sub_title = ''
-# table_ins = ''
-# query = ''
+import json,uuid,os
+from forms import *
+from django.contrib.auth.models import User,Group
+# from devsapp.ansible_runner.runner import AdHocRunner,PlayBookRunner
+# from devsapp.ansible_runner.callback import CommandResultCallback
 
 #分页函数
 def pagination(request, queryset, display_amount=10, after_range_num = 5,before_range_num = 4):
@@ -107,8 +99,8 @@ def lists(request,table):
     if table == 'asset':
         raw_data = Assets.objects.order_by('id')
         list_template = 'asset/ass_list.html'
-        sub_title = '资产'
-        page_title = '资产列表'
+        sub_title = '资产列表'
+        page_title = '资产管理'
     if table == 'user':
         raw_data = User.objects.order_by('id')
         list_template = 'user/user_list.html'
@@ -145,7 +137,7 @@ def lists(request,table):
 @login_required
 def add(request,table):
     global form,sub_title
-    page_title = '基础信息'
+    page_title = '资产管理'
     #根据提交的请求不同，获取来自不同Form的表单数据
     if table == 'node':
         form = NodeForm(request.POST or None)
@@ -188,7 +180,7 @@ def add(request,table):
 @login_required
 def assetadd(request,table):
     global form,sub_title
-    page_title = '信息'
+    page_title = '资产管理'
     if table == 'asset':
         form = AssetForm(request.POST or None)
         sub_title = '添加资产'
@@ -196,6 +188,7 @@ def assetadd(request,table):
         instance = form.save(commit=False)
         if table == 'asset':
             instance.status = 1
+
         instance.save()
         return redirect('lists',table = table)
     context = {
@@ -206,28 +199,37 @@ def assetadd(request,table):
     }
     return render(request,'asset/resass_add.html',context)
 
+@login_required
 def assupd(request,table,pk):
     global table_ins
     if table == 'asset':
         # ip = Assets.objects.filter(pk=pk)
         table_ins = get_object_or_404(Assets, pk=pk)
+
     if request.method == 'POST':
         # ip = Assets.objects.filter(pk=pk)
+
 
         try:
             resource = []
             dict = {}
+
+
             dict['hostname'] = table_ins.ip
+            dict["username"] = SSHInfo.objects.filter(host=table_ins.ip)[0].usr
+            dict["password"] = SSHInfo.objects.filter(host=table_ins.ip)[0].pwd
+
             resource.append(dict)
+            print resource
             abt = ANSRunner(resource)
             hostlist=[]
             hostlist.append(table_ins.ip)
             abt.run_model(host_list=hostlist, module_name="setup", module_args=" ")
-            data = abt.get_model_result()
+            data = abt.get_setmodel_result()
             result = abt.handle_cmdb_data(data)[0]
 
             Assets.objects.filter(ip=table_ins.ip).update(**result)
-            if resource["status"]==1:
+            if result["status"]==1:
                 mess = 'error'
             else:
                 mess = 'success'
@@ -266,6 +268,7 @@ def index(request):
 
 
 #修改数据,函数中的pk代表数据的id
+@login_required
 def edit(request, table, pk):
     global form,sub_title
     if table == 'line':
@@ -319,7 +322,7 @@ def edit(request, table, pk):
     #与res_add.html用同一个页面，只是edit会在res_add页面做数据填充
     return render(request, 'res_add.html', context)
 
-
+@login_required
 def delete(request, table ,pk):
     global table_ins
     #选择相应的表格
@@ -337,6 +340,8 @@ def delete(request, table ,pk):
 
     if table == 'user':
         table_ins = get_object_or_404(User,pk=pk)
+    if table == 'toolscripts':
+        table_ins = get_object_or_404(ToolsScript,pk=pk)
 
     #接收通过AJAX提交过来的POST
     if request.method == 'POST':
@@ -352,7 +357,226 @@ def delete(request, table ,pk):
         return JsonResponse(data,safe=False)
 
 
+@login_required
+def script_online(request):
+    global fileName,playbook_server_value
+    if request.method == "GET":
+        serverList = Server_Assets.objects.all()
+        # groupList = Group.objects.all()
+        userList = User.objects.all()
+        serviceList = service_assets.objects.all()
+        return render(request,'file/apps_playbook_online.html',{"user":request.user,"userList":userList,
+                                                            "serverList":serverList,"serviceList":serviceList},
+                                  )
+    elif request.method == "POST":
+        sList = []
+        if request.POST.get('server_model') in ['service','custom']:
+            if request.POST.get('server_model') == 'custom':
+                for sid in request.POST.getlist('playbook_server[]'):
+                    server = Server_Assets.objects.get(id=sid)
+                    sList.append(server.ip)
+                playbook_server_value = None
+            elif request.POST.get('server_model') == 'service':
+                serverList = Assets.objects.filter(business=request.POST.get('ansible_service'))
+                sList = [  s.server_assets.ip for s in serverList ]
+                playbook_server_value = request.POST.get('ansible_service')
+            fileName = '/upload/playbook/online-{ram}.yaml'.format(ram=uuid.uuid4().hex[0:8])
+            filePath = os.getcwd() + fileName
+            if request.POST.get('playbook_content'):
+                with open(filePath, 'w') as f:
+                    f.write(request.POST.get('playbook_content'))
+            else:
+                return JsonResponse({'msg':"文件内容不能为空","code":500,'data':[]})
+        try:
+            playbook = Ansible_Playbook.objects.create(
+                                            playbook_name = request.POST.get('playbook_name'),
+                                            playbook_desc = request.POST.get('playbook_desc'),
+                                            playbook_vars = request.POST.get('playbook_vars'),
+                                            playbook_uuid = uuid.uuid4(),
+                                            playbook_file = fileName,
+                                            playbook_server_model = request.POST.get('server_model','custom'),
+                                            playbook_server_value = playbook_server_value,
+                                            playbook_auth_group = request.POST.get('playbook_auth_group',0),
+                                            playbook_auth_user = request.POST.get('playbook_auth_user',0),
+                                            playbook_type = 1
+                                            )
+        except Exception, ex:
+            return JsonResponse({'msg':str(ex),"code":500,'data':[]})
+        for sip in sList:
+            try:
+                Ansible_Playbook_Number.objects.create(playbook=playbook,playbook_server=sip)
+            except Exception, ex:
+                playbook.delete()
+                print ex
+        #操作日志异步记录
+        # AnsibleRecord.PlayBook.insert(user=str(request.user),ans_id=playbook.id,ans_name=playbook.playbook_name,ans_content="添加Ansible剧本",ans_server=','.join(sList))
+        return JsonResponse({'msg':None,"code":200,'data':[]})
 
+def add_scripts(request):
+    if request.method == "POST":
+        name = request.POST.get('name', None)
+        tool_script = request.POST.get('tool_script', None)
+        tool_run_type = request.POST.get('tool_run_type', None)
+        comment = request.POST.get('comment', None)
+        obj = ToolsScript.objects.create(name=name,tool_script=tool_script,tool_run_type=tool_run_type,comment=comment)
+        msg = "添加成功"
+        context = {"page_title": 'SCRIPTS', "sub_title": 'ADD',"msg":msg }
+        return render(request, 'scripts/sc_add.html', context=context)
+    else:
+        context = {"page_title": 'SCRIPTS', "sub_title": 'ADD', }
+        return render(request, 'scripts/sc_add.html',context=context)
+    # context = { "page_title": 'SCRIPTS', "sub_title": 'ADD',}
+    # return render(request,'scripts/sc_add.html',context=context)
+
+def show_scripts(request,sid):
+    if request.method == "GET":
+        obj1 = ToolsScript.objects.filter(id=sid)
+        return render(request, 'scripts/shedit.html', {'obj': obj1,"page_title": '脚本编辑',"sub_title":obj1[0].name})
+
+    elif request.method == "POST":
+        name = request.POST.get('name', None)
+        tool_script = request.POST.get('tool_script', None)
+        tool_run_type = request.POST.get('tool_run_type', None)
+        comment = request.POST.get('comment', None)
+        obj1 = ToolsScript.objects.filter(id=sid).first()
+        obj1.name = name
+        obj1.tool_script = tool_script
+        obj1.tool_run_type = tool_run_type
+        obj1.comment = comment
+        obj1.save()
+        return redirect('/listsc')
+
+def shdel(request,nid):  # 删除
+    # ret = {'status': 'success', 'data': 'success'}
+    # print ret
+    if request.method == "POST":
+        try:
+            obj1 = ToolsScript.objects.filter(id=nid).delete()
+            data = 'success'
+        except:
+            data = 'error'
+        return JsonResponse(data,safe=False)
+
+
+def shell(request, nid):  ##执行脚本页面
+    # print nid
+    if request.method == "GET":
+        obj = Assets.objects.filter(id__gt=0)
+        # print obj
+        sh = ToolsScript.objects.filter(id=nid)
+
+        return render(request, 'scripts/shell.html', {"host_list": obj, "sh": sh})
+def shell_sh(request):  ##执行脚本-执行
+    ret = {'status': True, 'data': None}
+    if request.method == 'POST':
+        try:
+            host_ids = request.POST.getlist('id', None)
+            sh_id = request.POST.get('shid', None)
+            # print host_ids
+            user = request.user
+            if not host_ids:
+                error1 = "请选择主机"
+                ret = {"error": error1, "status": False}
+                return HttpResponse(json.dumps(ret))
+
+            idstring = ','.join(host_ids)
+            # print idstring
+
+            host = SSHInfo.objects.extra(where=['id IN (' + idstring + ')'])
+            host1 = SSHInfo.objects.filter(id=host_ids)
+            sh = ToolsScript.objects.filter(id=sh_id)
+            print sh
+            print host
+
+            for s in sh:
+                if s.tool_run_type == 0:
+                    with  open('scripts/shell/test.sh', 'w+') as f:
+                        f.write(s.tool_script)
+                        a = 'scripts/shell/{}.sh'.format(s.id)
+                    os.system("sed 's/\r//'  scripts/shell/test.sh >  {}".format(a))
+
+                elif s.tool_run_type == 1:
+                    with  open('scripts/shell/test.py', 'w+') as f:
+                        f.write(s.tool_script)
+                        p = 'scripts/shell/{}.py'.format(s.id)
+                    os.system("sed 's/\r//'  scripts/shell/test.py >  {}".format(p))
+                elif s.tool_run_type == 2:
+                    with  open('scripts/shell/test.yml', 'w+') as f:
+                        f.write(s.tool_script)
+                        y = 'scripts/shell/{}.yml'.format(s.id)
+                    os.system("sed 's/\r//'  scripts/shell/test.yml >  {}".format(y))
+                else:
+                    ret['status'] = False
+                    ret['error'] = '脚本类型错误,只能是shell、yml、python'
+                    return HttpResponse(json.dumps(ret))
+
+                data1 = []
+                for h in host:
+                    try:
+                        data2 = {}
+                        assets = [
+                            {
+                                "hostname": h.hostname,
+                                "ip": h.ip,
+                                "port": h.port,
+                                "username": h.username,
+                                "password": h.password,
+                            },
+                        ]
+
+                        # history = History.objects.create(ip=h.ip, root=h.username, port=h.port, cmd=s.name, user=user)
+                        if s.tool_run_type == 0:
+                            task_tuple = (('script', a),)
+                            hoc = AdHocRunner(hosts=assets)
+                            hoc.results_callback = CommandResultCallback()
+                            r = hoc.run(task_tuple)
+                            data2['ip'] = h.ip
+                            data2['data'] = r['contacted'][h.hostname]['stdout']
+                            data1.append(data2)
+                        elif s.tool_run_type == 1:
+                            task_tuple = (('script', p),)
+                            hoc = AdHocRunner(hosts=assets)
+                            hoc.results_callback = CommandResultCallback()
+                            r = hoc.run(task_tuple)
+                            data2['ip'] = h.ip
+                            data2['data'] = r['contacted'][h.hostname]['stdout']
+                            data1.append(data2)
+                        elif s.tool_run_type == 2:
+                            play = PlayBookRunner(assets, playbook_path=y)
+                            b = play.run()
+                            print(b)
+                            data2['ip'] = h.ip
+                            data2['data'] = b['plays'][0]['tasks'][1]['hosts'][h.hostname]['stdout'] + \
+                                            b['plays'][0]['tasks'][1]['hosts'][h.hostname]['stderr']
+                            print(data2['data'])
+
+                            print(data2)
+                            data1.append(data2)
+                        else:
+                            data2['ip'] = "脚本类型错误"
+                            data2['data'] = "脚本类型错误"
+                    except  Exception as  e:
+                        data2['ip'] = h.ip
+                        data2['data'] = "账号密码不对，请修改 {}".format(e)
+                        data1.append(data2)
+
+                ret['data'] = data1
+                print(ret)
+                return HttpResponse(json.dumps(ret))
+        except Exception as e:
+            ret['status'] = False
+            ret['error'] = '未知错误 {}'.format(e)
+            return HttpResponse(json.dumps(ret))
+
+
+def scinfo(request, nid):  # 查看
+    if request.method == "GET":
+        obj1 = ToolsScript.objects.filter(id=nid)
+        return render(request, 'scripts/shinfo.html', {'obj': obj1})
+
+def sh(request):  ##首页
+    sh = ToolsScript.objects.filter(id__gt=0).order_by('-id')
+    return render(request, 'scripts/sh.html', {"sh_list": sh, })
 
 #用户登陆选项，所有的函数将会返回一个template_response的实例，用来描绘页面，同时你也可以在return之前增加一些特定的功能
 #用户登陆
@@ -381,12 +605,17 @@ def registuser(request):
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
+            repassword = form.cleaned_data['repassword']
             email = form.cleaned_data['email']
 
-            exuser = User.objects.filter(username = username)
-            if len(exuser) > 0:
-                err = '用户名已存在'
-                return render(request, 'user/useradd.html', {'form': form,'error':err,'page_title':"用户管理",'sub_title':"用户",})
+            if password==repassword:
+                exuser = User.objects.filter(username = username)
+                if len(exuser) > 0:
+                    err = '用户名已存在'
+                    return render(request, 'user/useradd.html', {'form': form,'error':err,'page_title':"用户管理",'sub_title':"用户",})
+            else:
+                err='密码不匹配'
+                return render(request, 'user/useradd.html',{'form': form, 'error': err, 'page_title': "用户管理", 'sub_title': "用户", })
 
             user = User.objects.create_user(username=username,password=password,email=email)
             user.save()
@@ -395,7 +624,6 @@ def registuser(request):
     else:
         form = RegistForm()
     return render(request,'user/useradd.html',{'form':form,'page_title':"用户管理",'sub_title':"用户",})
-
 
 def changepwd(request):
     if request.method == 'GET':
@@ -416,32 +644,6 @@ def changepwd(request):
                 return render(request,'user/changepwd.html',  {'form': form, 'oldpassword_is_wrong': True, 'page_title':"用户管理",'sub_title':"用户",})
         else:
             return render(request,'user/changepwd.html', {'form': form, 'page_title':"用户管理",'sub_title':"用户", })
-
-# def runmodule(request):
-#     if request.method == 'POST':
-#         myform = hostform(request.POST)
-#         if myform.is_valid():
-#             # types = myform.cleaned_data['types']
-#             hostip = myform.cleaned_data['hostip']
-#             hostgrp = myform.cleaned_data['hostgrp']
-#             modules = myform.cleaned_data['modules']
-#             arg = myform.cleaned_data['arg']
-#             resource = []
-#             dict={}
-#             dict["hostname"] = hostip
-#             resource.append(dict)
-#             abt = ANSRunner(resource)
-#             hostlist = []
-#             hostlist.append(hostip)
-#             abt.run_model(hostlist,modules,arg)
-#             result = abt.get_model_result()
-#
-#     else:
-#         myform = hostform()
-#
-#     return render(request,'ansible.html',{"form":myform,"page_title":'ANSIBLE',"sub_title":'运行模块'})
-
-
 
 def cmd_commands(request):
     context = {}
@@ -465,73 +667,66 @@ def cmd_commands(request):
     context = {"form":form,"page_title":'SSH',"sub_title":'command',"result":result}
     return render(request,'ssh/sshlist.html',context)
 
-def ans_module(request):
-    context = {}
-    global result
-    result = []
-    resource = []
-    hostlist = []
-    results = ''
 
+def editscript(request):
     if request.method == 'POST':
-        form = AnsibleForm(request.POST)
+        form = ScriptCreateUpdateForm(request.POST)
         if form.is_valid():
-            ips = form.cleaned_data['ips']
-            for i in ips:
-                dict = {}
-                dict["hostname"] = i.ip
-                resource.append(dict)
-                hostlist.append(i.ip)
-            print str(hostlist)
-            print resource
-            modules = form.cleaned_data['modules']
-            arg = form.cleaned_data['arg']
-
-            # dict["hostname"] = ips
-            # resource.append(dict)
-            abt = ANSRunner(resource)
-            # hostlist = []
-            # hostlist = hostlist.append(ip)
-            abt.run_model(host_list=hostlist, module_name=str(modules),module_args=str(arg))
-            data = abt.get_model_result()
-            print data
-            # for i in ips:
-            #     for k, v in json.loads(data).items():
-            #         if len(v) == 0:
-            #             pass
-            #         else:
-            #
-            #             print json.loads(v)
-            #             if k == 'success':
-            #                 result.append(v[i.ip])
-            #             if k == 'unreachable':
-            #                 result.append(v[i.ip])
-            #             if k == 'failed':
-            #                 result.append(v[i.ip])
-            #             # result = v
-            #
-            #             # result = result[i.ip]
-            #             if result == '':
-            #                 results = k
-            for k, v in json.loads(data).items():
-                if len(v) == 0:
-                    pass
-                else:
-                    for i in ips:
-                        result = v
-                        result = result[i.ip]
-                        if result == '':
-                            results = k
+            name = form.cleaned_data['name']
+            script = form.cleaned_data['script']
+            info = form.cleaned_data['info']
+            path = 'D:/'
+            f = open(os.path.join(path,name),'w')
+            f.write(script)
+            f.close()
+            form.save()
+            return redirect('listsc')
+            # return render(request,'file/script.html',)
     else:
-        form = AnsibleForm()
+        form = ScriptCreateUpdateForm()
+    return render(request,'file/script.html',{"form":form})
+
+def listsc(request):
+    global query
+    listssc=ToolsScript.objects.order_by('id')
+    if request.method == 'GET':
+        kwargs = {}
+        query = ''
+        for key, value in request.GET.iteritems():
+            if key != 'csrfmiddlewaretoken' and key != 'page':
+                if key == 'node':
+                    kwargs['node__node_name__contains'] = value
+                    query += '&' + key + '=' + value
+                else:
+                    kwargs[key + '__contains'] = value
+                    query += '&' + key + '=' + value
+        data = listssc.filter(**kwargs)
+    else:
+        data = listssc
+
+    data_list, page_range, count, page_nums = pagination(request, data)
     context = {
-        "form":form,
-        "sub_title":"Modules",
-        "page_title":"AnsibleManager",
-        "result":result,
-        "results":results
+        'data':data_list,
+        # 'table':table,
+        'query':query,
+        'page_range':page_range,
+        'count': count,
+        'page_nums':page_nums,
+        'page_title':"SCRIPTS",
+        'sub_title':"lists"
     }
-    return render(request,'ans/ansresult.html',context)
+    return render(request,'file/sclist.html',context)
+
+def host_web_ssh(request):   ##  web ssh 登陆
+    if request.method == 'POST':
+        id = request.POST.get('id', None)
+        obj = SSHInfo.objects.filter(id=id).first()
+        ip = obj.ip+":"+obj.port
+        username = obj.username
+        password = obj.password
+        ret = {"ip":ip,"username":username,'password':password,"static":True}
+        return HttpResponse(json.dumps(ret))
 
 
-
+# def commandapi(request):
+#     if request.method == "POST":

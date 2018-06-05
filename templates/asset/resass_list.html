@@ -56,11 +56,13 @@
 
                                 <div class="hidden-sm hidden-xs action-buttons">
                                     <!--编辑信息按钮-->
-                                    <a id="modal_button_{{ item.id }}" class="red" href="#modal_form"
+                                    <a  id="modal_button_{{ item.id }}" class="red" href="#modal_form"
                                        data-toggle="modal" rel="{% url 'assupd' table item.id %}" content="确认更新该条目么？"
                                        title="更新信息">
                                             <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                             更新
+                                    </a>
+                                    <a type="button" class="btn btn-primary  webssh">webssh
                                     </a>
                                     <!--删除信息按钮-->
 
@@ -95,7 +97,6 @@
                                                 </span>
                                                   </a>
                                                 </li>
-
 
                                         </ul>
                                     </div>

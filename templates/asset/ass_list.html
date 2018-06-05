@@ -3,7 +3,7 @@
 
     <div class="col-sm-3">
                         <div class="input-group">
-                            <span class="input-group-addon" id="node_name" >hostname</span>
+                            <span class="input-group-addon" id="node_name" >主机名</span>
                          <!-- 如果之前已经写入了node_name的信息，那么页面重新加载后保留-->
                             <input type="text" class="form-control" placeholder="" aria-describedby="hostname" name="hostname"
                                     {% if request.GET.node_name %}value = {{ request.GET.node_name }}{% endif %}>
@@ -12,7 +12,7 @@
 
                      <div class="col-sm-3">
                         <div class="input-group">
-                            <span class="input-group-addon" id="node_address">ip</span>
+                            <span class="input-group-addon" id="node_address">IP地址</span>
                             <input type="text" class="form-control" placeholder="" aria-describedby="ip" name = "ip"
                                     {% if request.GET.node_address %}value = {{ request.GET.node_address }}{% endif %}>
                         </div>
@@ -24,13 +24,13 @@
 
 {% block table_tr %}
 
-<th>ip</th>
-<th>hostname</th>
-<th>cpu_number</th>
-<th>kernel</th>
-<th>model</th>
-<th>disk_total</th>
-<th>ram_total</th>
+<th>IP地址</th>
+<th>主机名</th>
+<th>CPU核数</th>
+<th>内核版本</th>
+<th>主机型号</th>
+<th>磁盘大小</th>
+<th>内存大小</th>
 
 
 {% endblock %}

@@ -12,8 +12,22 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 2.7.6 (/usr/local/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.13 (D:\Install\python27\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="django-file-manager-master" />
+    <orderEntry type="module" module-name="testprocject" />
+    <orderEntry type="module" module-name="SmartQQ-master" />
+    <orderEntry type="module" module-name="diango-first" />
+    <orderEntry type="module" module-name="redash" />
+    <orderEntry type="module" module-name="sigmam最新20180103" />
+    <orderEntry type="module" module-name="djangofirst" />
+    <orderEntry type="module" module-name="education" />
+    <orderEntry type="module" module-name="vue-topo-master" />
+    <orderEntry type="module" module-name="incubator-superset" />
+    <orderEntry type="module" module-name="lsof" />
+    <orderEntry type="module" module-name="CRM_PROCESS" />
+    <orderEntry type="module" module-name="CRM_PROCESS" />
+    <orderEntry type="module" module-name="CRM_PROCESS" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

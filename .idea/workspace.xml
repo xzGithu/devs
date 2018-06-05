@@ -1,7 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="425fce87-7e79-46d4-81b1-7956eb52dec5" name="Default" comment="" />
+    <list default="true" id="425fce87-7e79-46d4-81b1-7956eb52dec5" name="Default" comment="chapter、tags、filter">
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/CC.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/fancybox_loading.gif" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/fancybox_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/info.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/jisc-logo-small.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/oii.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/oii_brand.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/oii_text.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/rainbow.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/zoom_in.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/zoom_out.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/images/zoom_reset.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/file_manager/img/folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/file_manager/img/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/file_manager/img/link_break.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/file_manager/img/page.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/file_manager/img/page_white_camera.png" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.idea/CRM_PROCESS.iml" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.idea/markdown-navigator/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/.project" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/README.txt" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/config.json" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/css/tablet.css" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/data.json" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/htaccess_example" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/index.html" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/excanvas.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/fancybox/jquery.fancybox.css" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/fancybox/jquery.fancybox.pack.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/sigma/_sigma.min.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/sigma/parseGexf_fin.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/sigma/sigma.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/sigma/sigma.min.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/sigma/sigma.parseGexf.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/js/sigma/sigma.parseJson.js" />
+      <change type="NEW" beforePath="" afterPath="D:/CRM_PROCESS/web.config" />
+      <change type="NEW" beforePath="" afterPath="D:/Git/education/.idea/education.iml" />
+      <change type="NEW" beforePath="" afterPath="D:/Git/education/.idea/markdown-navigator/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="D:/Git/education/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/devsapp/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/api.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/permission/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/permission/playbook.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/permission/script.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/serializers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/urls/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/urls/api_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/urls/views_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/utils/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/utils/constant.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/utils/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/views/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/views/playbook.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation/views/script.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/file_manager/css/file_manager.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_left_sidebar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_modal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_top_sidebar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/app_list_include.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/copy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/delete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/delete_selected.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/mkdir.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/mkln.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/move.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/permission.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/rename.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/update.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/file_manager/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ans/apps_model.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/asset/resass_add1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/ansible_module.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/detail_script.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/copy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/file.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/none.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/script.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/service.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/shell.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/module/yum.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/new_update_playbook.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/new_update_script.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/playbook.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operation/script.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/permission.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/devsapp/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/devsapp/migrations/0002_auto_20170824_1358.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/devsapp/migrations/0003_sshinfo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/devsapp/migrations/0004_assets.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/assets/jquery-2.0.3/jquery插件库.url" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/add.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/ansible.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/index1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/lists.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible.png" afterPath="$PROJECT_DIR$/ansible.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/Thumbs.db" afterPath="$PROJECT_DIR$/static/assets/avatars/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/avatar.png" afterPath="$PROJECT_DIR$/static/assets/avatars/avatar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/avatar1.png" afterPath="$PROJECT_DIR$/static/assets/avatars/avatar1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/avatar2.png" afterPath="$PROJECT_DIR$/static/assets/avatars/avatar2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/avatar3.png" afterPath="$PROJECT_DIR$/static/assets/avatars/avatar3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/avatar4.png" afterPath="$PROJECT_DIR$/static/assets/avatars/avatar4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/avatar5.png" afterPath="$PROJECT_DIR$/static/assets/avatars/avatar5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/profile-pic.jpg" afterPath="$PROJECT_DIR$/static/assets/avatars/profile-pic.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/avatars/user.jpg" afterPath="$PROJECT_DIR$/static/assets/avatars/user.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/images/Thumbs.db" afterPath="$PROJECT_DIR$/static/assets/css/images/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/images/loading.gif" afterPath="$PROJECT_DIR$/static/assets/css/images/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/font/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/static/assets/font/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/image-1.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/image-1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/image-2.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/image-2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/image-3.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/image-3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/image-4.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/image-4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/image-5.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/image-5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/image-6.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/image-6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/thumb-1.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/thumb-1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/thumb-2.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/thumb-2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/thumb-3.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/thumb-3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/thumb-4.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/thumb-4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/thumb-5.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/thumb-5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/images/gallery/thumb-6.jpg" afterPath="$PROJECT_DIR$/static/assets/images/gallery/thumb-6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/jquery-2.0.3.zip" afterPath="$PROJECT_DIR$/static/jquery-2.0.3.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/devs.iml" afterPath="$PROJECT_DIR$/.idea/devs.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devs/__init__.py" afterPath="$PROJECT_DIR$/devs/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devs/settings.py" afterPath="$PROJECT_DIR$/devs/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devs/urls.py" afterPath="$PROJECT_DIR$/devs/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devs/wsgi.py" afterPath="$PROJECT_DIR$/devs/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/__init__.py" afterPath="$PROJECT_DIR$/devsapp/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/admin.py" afterPath="$PROJECT_DIR$/devsapp/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/api_v2.py" afterPath="$PROJECT_DIR$/devsapp/api_v2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/apps.py" afterPath="$PROJECT_DIR$/devsapp/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/forms.py" afterPath="$PROJECT_DIR$/devsapp/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/models.py" afterPath="$PROJECT_DIR$/devsapp/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/paramiko_client.py" afterPath="$PROJECT_DIR$/devsapp/paramiko_client.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/q.py" afterPath="$PROJECT_DIR$/devsapp/q.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/test.py" afterPath="$PROJECT_DIR$/devsapp/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/tests.py" afterPath="$PROJECT_DIR$/devsapp/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/views.py" afterPath="$PROJECT_DIR$/devsapp/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/ace-ie.min.css" afterPath="$PROJECT_DIR$/static/assets/css/ace-ie.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/ace-rtl.min.css" afterPath="$PROJECT_DIR$/static/assets/css/ace-rtl.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/ace-skins.min.css" afterPath="$PROJECT_DIR$/static/assets/css/ace-skins.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/ace.min.css" afterPath="$PROJECT_DIR$/static/assets/css/ace.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/bootstrap-editable.css" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-editable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/bootstrap-timepicker.css" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-timepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/chosen.css" afterPath="$PROJECT_DIR$/static/assets/css/chosen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/colorbox.css" afterPath="$PROJECT_DIR$/static/assets/css/colorbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/colorpicker.css" afterPath="$PROJECT_DIR$/static/assets/css/colorpicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/datepicker.css" afterPath="$PROJECT_DIR$/static/assets/css/datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/daterangepicker.css" afterPath="$PROJECT_DIR$/static/assets/css/daterangepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/dropzone.css" afterPath="$PROJECT_DIR$/static/assets/css/dropzone.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/font-awesome-ie7.min.css" afterPath="$PROJECT_DIR$/static/assets/css/font-awesome-ie7.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/static/assets/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/fullcalendar.css" afterPath="$PROJECT_DIR$/static/assets/css/fullcalendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/jquery-ui-1.10.3.custom.min.css" afterPath="$PROJECT_DIR$/static/assets/css/jquery-ui-1.10.3.custom.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/jquery-ui-1.10.3.full.min.css" afterPath="$PROJECT_DIR$/static/assets/css/jquery-ui-1.10.3.full.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/jquery.gritter.css" afterPath="$PROJECT_DIR$/static/assets/css/jquery.gritter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/select2.css" afterPath="$PROJECT_DIR$/static/assets/css/select2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/ui.jqgrid.css" afterPath="$PROJECT_DIR$/static/assets/css/ui.jqgrid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/ace-elements.min.js" afterPath="$PROJECT_DIR$/static/assets/js/ace-elements.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/ace-extra.min.js" afterPath="$PROJECT_DIR$/static/assets/js/ace-extra.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/ace.min.js" afterPath="$PROJECT_DIR$/static/assets/js/ace.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/additional-methods.min.js" afterPath="$PROJECT_DIR$/static/assets/js/additional-methods.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/bootbox.min.js" afterPath="$PROJECT_DIR$/static/assets/js/bootbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-colorpicker.min.js" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-colorpicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-tag.min.js" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-tag.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-wysiwyg.min.js" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-wysiwyg.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/chosen.jquery.min.js" afterPath="$PROJECT_DIR$/static/assets/js/chosen.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/date-time/bootstrap-datepicker.min.js" afterPath="$PROJECT_DIR$/static/assets/js/date-time/bootstrap-datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/date-time/bootstrap-timepicker.min.js" afterPath="$PROJECT_DIR$/static/assets/js/date-time/bootstrap-timepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/date-time/daterangepicker.min.js" afterPath="$PROJECT_DIR$/static/assets/js/date-time/daterangepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/date-time/moment.min.js" afterPath="$PROJECT_DIR$/static/assets/js/date-time/moment.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/dropzone.min.js" afterPath="$PROJECT_DIR$/static/assets/js/dropzone.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/excanvas.min.js" afterPath="$PROJECT_DIR$/static/assets/js/excanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.min.js" afterPath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.pie.min.js" afterPath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.pie.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.resize.min.js" afterPath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.resize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/fuelux/data/fuelux.tree-sampledata.js" afterPath="$PROJECT_DIR$/static/assets/js/fuelux/data/fuelux.tree-sampledata.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.spinner.min.js" afterPath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.spinner.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.tree.min.js" afterPath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.tree.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.wizard.min.js" afterPath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.wizard.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/fullcalendar.min.js" afterPath="$PROJECT_DIR$/static/assets/js/fullcalendar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/html5shiv.js" afterPath="$PROJECT_DIR$/static/assets/js/html5shiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jqGrid/i18n/grid.locale-en.js" afterPath="$PROJECT_DIR$/static/assets/js/jqGrid/i18n/grid.locale-en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jqGrid/jquery.jqGrid.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jqGrid/jquery.jqGrid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery-2.0.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.3.full.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.3.full.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.autosize.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.autosize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.colorbox-min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.colorbox-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.easy-pie-chart.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.easy-pie-chart.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.gritter.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.gritter.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.hotkeys.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.hotkeys.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.inputlimiter.1.3.1.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.inputlimiter.1.3.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.knob.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.knob.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.maskedinput.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.maskedinput.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.mobile.custom.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.mobile.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.nestable.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.nestable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.slimscroll.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.slimscroll.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.sparkline.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.sparkline.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.ui.touch-punch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/jquery.validate.min.js" afterPath="$PROJECT_DIR$/static/assets/js/jquery.validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/markdown/bootstrap-markdown.min.js" afterPath="$PROJECT_DIR$/static/assets/js/markdown/bootstrap-markdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/markdown/markdown.min.js" afterPath="$PROJECT_DIR$/static/assets/js/markdown/markdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/respond.min.js" afterPath="$PROJECT_DIR$/static/assets/js/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/select2.min.js" afterPath="$PROJECT_DIR$/static/assets/js/select2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/typeahead-bs2.min.js" afterPath="$PROJECT_DIR$/static/assets/js/typeahead-bs2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/x-editable/ace-editable.min.js" afterPath="$PROJECT_DIR$/static/assets/js/x-editable/ace-editable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/js/x-editable/bootstrap-editable.min.js" afterPath="$PROJECT_DIR$/static/assets/js/x-editable/bootstrap-editable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Modal.html" afterPath="$PROJECT_DIR$/templates/Modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Modal_js.html" afterPath="$PROJECT_DIR$/templates/Modal_js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Pagination.html" afterPath="$PROJECT_DIR$/templates/Pagination.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ans/ansresult.html" afterPath="$PROJECT_DIR$/templates/ans/ansresult.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/assModal.html" afterPath="$PROJECT_DIR$/templates/asset/assModal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/assModal_js.html" afterPath="$PROJECT_DIR$/templates/asset/assModal_js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/ass_list.html" afterPath="$PROJECT_DIR$/templates/asset/ass_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/resass_add.html" afterPath="$PROJECT_DIR$/templates/asset/resass_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/resass_list.html" afterPath="$PROJECT_DIR$/templates/asset/resass_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/device_list.html" afterPath="$PROJECT_DIR$/templates/device_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/head_css.html" afterPath="$PROJECT_DIR$/templates/head_css.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/javascript.html" afterPath="$PROJECT_DIR$/templates/javascript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/line_list.html" afterPath="$PROJECT_DIR$/templates/line_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/node_list.html" afterPath="$PROJECT_DIR$/templates/node_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/res_add.html" afterPath="$PROJECT_DIR$/templates/res_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/res_list.html" afterPath="$PROJECT_DIR$/templates/res_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/cmd_res.html" afterPath="$PROJECT_DIR$/templates/ssh/cmd_res.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/django_view.html" afterPath="$PROJECT_DIR$/templates/ssh/django_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/host_add.html" afterPath="$PROJECT_DIR$/templates/ssh/host_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/host_list.html" afterPath="$PROJECT_DIR$/templates/ssh/host_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/hostres_list.html" afterPath="$PROJECT_DIR$/templates/ssh/hostres_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/result.html" afterPath="$PROJECT_DIR$/templates/ssh/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ssh/sshlist.html" afterPath="$PROJECT_DIR$/templates/ssh/sshlist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/changepwd.html" afterPath="$PROJECT_DIR$/templates/user/changepwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/resuser_list.html" afterPath="$PROJECT_DIR$/templates/user/resuser_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/user_list.html" afterPath="$PROJECT_DIR$/templates/user/user_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../incubator-superset/superset/assets/package-lock.json" afterPath="$PROJECT_DIR$/../incubator-superset/superset/assets/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../incubator-superset/superset/assets/package.json" afterPath="$PROJECT_DIR$/../incubator-superset/superset/assets/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../redash/requirements_oracle_ds.txt" afterPath="$PROJECT_DIR$/../redash/requirements_oracle_ds.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/devsapp/migrations/__init__.py" afterPath="$PROJECT_DIR$/operation/migrations/__init__.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,9 +279,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/devs$simple1.coverage" NAME="simple1 Coverage Results" MODIFIED="1526892003121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testprocject" />
+    <SUITE FILE_PATH="coverage/devs$manage.coverage" NAME="manage Coverage Results" MODIFIED="1526972631411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../redash" />
+    <SUITE FILE_PATH="coverage/devs$etest.coverage" NAME="etest Coverage Results" MODIFIED="1526373549373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/che" />
+    <SUITE FILE_PATH="coverage/devs$monagent.coverage" NAME="monagent Coverage Results" MODIFIED="1523175604820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../chat" />
+    <SUITE FILE_PATH="coverage/devs$client.coverage" NAME="client Coverage Results" MODIFIED="1522737171537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../chat" />
+    <SUITE FILE_PATH="coverage/devs$server__1_.coverage" NAME="server (1) Coverage Results" MODIFIED="1522402853765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../chat" />
+    <SUITE FILE_PATH="coverage/devs$e.coverage" NAME="e Coverage Results" MODIFIED="1522303290015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../torna" />
+    <SUITE FILE_PATH="coverage/devs$server.coverage" NAME="server Coverage Results" MODIFIED="1522737069489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../chat" />
+    <SUITE FILE_PATH="coverage/devs$ttt.coverage" NAME="ttt Coverage Results" MODIFIED="1525416885617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devs$api_v2.coverage" NAME="api_v2 Coverage Results" MODIFIED="1504766010336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/devsapp" />
-    <SUITE FILE_PATH="coverage/devs$q.coverage" NAME="q Coverage Results" MODIFIED="1504687709307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/devsapp" />
+    <SUITE FILE_PATH="coverage/devs$test.coverage" NAME="test Coverage Results" MODIFIED="1525227355433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../chat" />
+    <SUITE FILE_PATH="coverage/devs$che.coverage" NAME="che Coverage Results" MODIFIED="1526439376527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/che" />
+    <SUITE FILE_PATH="coverage/devs$monserver.coverage" NAME="monserver Coverage Results" MODIFIED="1523175625259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../chat" />
+    <SUITE FILE_PATH="coverage/devs$testre.coverage" NAME="testre Coverage Results" MODIFIED="1528167680123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testprocject" />
+    <SUITE FILE_PATH="coverage/devs$app.coverage" NAME="app Coverage Results" MODIFIED="1526006809009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/SmartQQ-master" />
+    <SUITE FILE_PATH="coverage/devs$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1526439958036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/che" />
     <SUITE FILE_PATH="coverage/devs$views.coverage" NAME="views Coverage Results" MODIFIED="1504230987498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/devsapp" />
+    <SUITE FILE_PATH="coverage/devs$q.coverage" NAME="q Coverage Results" MODIFIED="1504687709307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/devsapp" />
+    <SUITE FILE_PATH="coverage/devs$agentt.coverage" NAME="agentt Coverage Results" MODIFIED="1526367836914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/che" />
+    <SUITE FILE_PATH="coverage/devs$loginJD.coverage" NAME="loginJD Coverage Results" MODIFIED="1526874827135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testprocject" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -20,80 +306,93 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="devs" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/devsapp/views.py">
+      <file leaf-file-name="readdata.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/readdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="387" column="30" lean-forward="true" selection-start-line="387" selection-start-column="30" selection-end-line="387" selection-end-column="30" />
+            <state relative-caret-position="1292">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="89" selection-end-column="121" />
               <folding>
-                <element signature="e#23#104#0" expanded="true" />
-                <element signature="e#871#2202#0" expanded="false" />
-                <element signature="e#2257#4372#0" expanded="false" />
-                <element signature="e#4418#5660#0" expanded="false" />
-                <element signature="e#5711#6241#0" expanded="false" />
-                <element signature="e#6277#7193#0" expanded="false" />
-                <element signature="e#7239#8094#0" expanded="false" />
-                <element signature="e#8151#10071#0" expanded="false" />
-                <element signature="e#11233#11389#0" expanded="false" />
-                <element signature="e#13510#13535#0" expanded="false" />
-                <element signature="e#15317#17536#0" expanded="false" />
-                <element signature="e#16239#16254#0" expanded="false" />
+                <marker date="1528096054050" expanded="true" signature="2498:3262" ph="..." />
+                <marker date="1528096054050" expanded="true" signature="3282:3416" ph="insert into lsofapp... " />
+                <marker date="1528096054050" expanded="true" signature="4350:4436" ph="insert into lisport... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <file leaf-file-name="testre.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../testprocject/testre.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="91" column="65" lean-forward="false" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
+            <state relative-caret-position="133">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
-                <element signature="n#label#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#button#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1528164708165" expanded="true" signature="169:214" ph="select cis,c... app_link_counts" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/devs/urls.py">
+      <file leaf-file-name="select-insert.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/select-insert.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="35" column="70" lean-forward="false" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="70" />
-              <folding />
+            <state relative-caret-position="342">
+              <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+              <folding>
+                <element signature="e#22#2009#0" expanded="false" />
+                <marker date="1527839877857" expanded="true" signature="26:2005" ph="SELECT T1HOS... T1HOST" />
+                <marker date="1527839877857" expanded="true" signature="313:1845" ph="SELECT T1HOS... APPNAME" />
+                <marker date="1527839877857" expanded="true" signature="615:1732" ph="SELECT T1.AP... LSOFAPP" />
+                <marker date="1527839877857" expanded="true" signature="2132:2353" ph="select sourc... mergedata" />
+                <marker date="1527839877857" expanded="true" signature="2430:2560" ph="select sourc... merge_link_counts" />
+                <marker date="1527839877857" expanded="true" signature="2699:2874" ph="insert into merge_link_counts... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="useradd.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/user/useradd.html">
+      <file leaf-file-name="insertcmdb.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/insertcmdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="2337">
+              <caret line="125" column="9" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="9" />
+              <folding>
+                <marker date="1522227666457" expanded="true" signature="648:697" ph="select disti... merge_link_counts" />
+                <marker date="1522227666457" expanded="true" signature="750:797" ph="select disti... merge_link_counts" />
+                <marker date="1522227666457" expanded="true" signature="926:960" ph="select hostn... RES__APP_HOST" />
+                <marker date="1522227666457" expanded="true" signature="1456:1514" ph="select disti... merge_link_counts" />
+                <marker date="1522227666457" expanded="true" signature="1568:1622" ph="select disti... merge_link_counts" />
+                <marker date="1522227666457" expanded="true" signature="1761:1807" ph="select hostn... RES_IP_ADDRESS" />
+                <marker date="1522227666457" expanded="true" signature="2381:2413" ph="select Host,... lisport" />
+                <marker date="1522227666457" expanded="true" signature="2466:2505" ph="select hostn... RES__APP_PORT" />
+                <marker date="1522227666457" expanded="true" signature="3112:3189" ph="select disti... merge_link_counts" />
+                <marker date="1522227666457" expanded="true" signature="3242:3313" ph="select disti... merge_link_counts" />
+                <marker date="1522227666457" expanded="true" signature="3402:3454" ph="select hostn... RES__APP_PROCESS" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resuser_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/user/resuser_list.html">
+      <file leaf-file-name="readdata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/readdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="39" column="62" lean-forward="false" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="76">
+              <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="71" />
+              <folding>
+                <element signature="e#43#54#0" expanded="true" />
+                <element signature="e#313#420#0" expanded="false" />
+                <element signature="e#447#521#0" expanded="false" />
+                <element signature="e#934#968#0" expanded="false" />
+                <marker date="1527839298805" expanded="true" signature="545:679" ph="insert into lsofapp... " />
+                <marker date="1527839298805" expanded="true" signature="787:873" ph="insert into lisport... " />
+                <marker date="1527839298805" expanded="true" signature="3469:3603" ph="insert into lsofapp... " />
+                <marker date="1527839298805" expanded="true" signature="4582:4668" ph="insert into lisport... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,41 +402,96 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>User</find>
+      <find>baseAssets</find>
+      <find>render_to_response</find>
+      <find>r</find>
+      <find>userRegister</find>
+      <find>Home</find>
+      <find>nid</find>
+      <find>height</find>
+      <find>sh.html</find>
+      <find>jigui_del</find>
+      <find>webssh</find>
+      <find>42.62.6.54</find>
+      <find>myModa6</find>
+      <find>table</find>
+      <find>#pre</find>
+      <find>state</find>
+      <find>100100</find>
+      <find>debug</find>
+      <find>keylist</find>
+      <find>timeFiles</find>
+      <find>getStartTime</find>
+      <find>util</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../redash" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/asset/resass_add.html" />
-        <option value="$PROJECT_DIR$/templates/asset/ass_list.html" />
-        <option value="$PROJECT_DIR$/templates/asset/assModal.html" />
-        <option value="$PROJECT_DIR$/devsapp/admin.py" />
-        <option value="$PROJECT_DIR$/devsapp/q.py" />
-        <option value="$PROJECT_DIR$/templates/ans/ansresult.html" />
-        <option value="$PROJECT_DIR$/templates/node_list.html" />
-        <option value="$PROJECT_DIR$/templates/asset/assModal_js.html" />
-        <option value="$PROJECT_DIR$/templates/javascript.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/devsapp/api_v2.py" />
-        <option value="$PROJECT_DIR$/devsapp/models.py" />
-        <option value="$PROJECT_DIR$/templates/line_list.html" />
-        <option value="$PROJECT_DIR$/templates/user/user_list.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/ssh/sshlist.html" />
-        <option value="$PROJECT_DIR$/templates/asset/resass_list.html" />
-        <option value="$PROJECT_DIR$/templates/user/changepwd.html" />
-        <option value="$PROJECT_DIR$/templates/user/afterchangepwd.html" />
-        <option value="$PROJECT_DIR$/templates/res_list.html" />
-        <option value="$PROJECT_DIR$/devsapp/forms.py" />
-        <option value="$PROJECT_DIR$/templates/res_add.html" />
-        <option value="$PROJECT_DIR$/devs/urls.py" />
-        <option value="$PROJECT_DIR$/templates/user/resuser_list.html" />
-        <option value="$PROJECT_DIR$/templates/user/useradd.html" />
-        <option value="$PROJECT_DIR$/devsapp/views.py" />
-        <option value="$PROJECT_DIR$/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/../testprocject/loginJD、.py" />
+        <option value="$PROJECT_DIR$/../testprocject/loginJD.py" />
+        <option value="$PROJECT_DIR$/../testprocject/simple1.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/chapter/admin.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/template/blog/list.html" />
+        <option value="$PROJECT_DIR$/../djangofirst/djangofirst/urls.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/templates/page.html" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/LOG/120_logatti.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/LOG/120_logkeyword.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/PROC/PROCNumber.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/PROC/PROCUtil.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/TCPPORT/ESBNumber.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/TCPPORT/ICMPStatus.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/TCPPORT/LISNumber.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/TCPPORT/TCPStatus.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/linuxspecial/linuxfilestime.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/PROC/70_PROCNumber.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/PROC/80_PROCUtil.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/TCPPORT/60_ESBNumber.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/TCPPORT/60_ICMPStatus.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/TCPPORT/60_LISNumber.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/TCPPORT/60_TCPStatus.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/TCPPORT/60_UDPStatus.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/hp-ux/procnum.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/solaris/procnum.sh" />
+        <option value="$PROJECT_DIR$/../djangofirst/templates/blog/share.html" />
+        <option value="$PROJECT_DIR$/../djangofirst/chapter/forms.py" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/PERF/aix_kername.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/SpecialCheck/unixcpuinc.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/aix/SpecialCheck/unixtelnet.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/linuxspecial/linuxcpuinc.sh" />
+        <option value="D:/sigmam最新20180510无日志/sigmam/linux/linuxspecial/linuxtelnet.sh" />
+        <option value="$PROJECT_DIR$/../djangofirst/djangofirst/settings.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/chapter/models.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/chapter/urls.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/chapter/views.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/templatetags/chapter_tags.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/templates/blog/latest_post.html" />
+        <option value="$PROJECT_DIR$/../djangofirst/templates/base.html" />
+        <option value="$PROJECT_DIR$/../djangofirst/chapter/templatetags/chapter_tags.py" />
+        <option value="$PROJECT_DIR$/../djangofirst/templates/blog/detail.html" />
+        <option value="$PROJECT_DIR$/../djangofirst/templates/blog/list.html" />
+        <option value="D:/Git/education/education/settings.py" />
+        <option value="D:/Git/education/courese/models.py" />
+        <option value="D:/Git/education/courese/admin.py" />
+        <option value="$PROJECT_DIR$/../redash/requirements_oracle_ds.txt" />
+        <option value="D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/readdata.py" />
+        <option value="$USER_HOME$/Desktop/readdata.py" />
+        <option value="D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/merge.py" />
+        <option value="D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/select-insert.py" />
+        <option value="$PROJECT_DIR$/../testprocject/testre.py" />
       </list>
     </option>
   </component>
@@ -147,11 +501,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/../incubator-superset/superset/assets/node_modules" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="45" />
-    <option name="width" value="1260" />
+    <option name="x" value="65" />
+    <option name="y" value="19" />
+    <option name="width" value="1254" />
     <option name="height" value="678" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -168,56 +528,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devs" type="462c0819:PsiDirectoryNode" />
+              <item name="testprocject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devs" type="462c0819:PsiDirectoryNode" />
-              <item name="devs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devs" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devs" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devs" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="lsoforacle" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/CRM_PROCESS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/py-source/chat/monagent.py" />
+  </component>
+  <component name="Push.Settings">
+    <excluded-roots>
+      <path value="$PROJECT_DIR$" />
+    </excluded-roots>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/user" />
-      <recent name="$PROJECT_DIR$/templates/asset" />
+      <recent name="D:\py-source\devs\templates" />
+      <recent name="D:\py-source\devs\templates\scripts" />
+      <recent name="D:\py-source\devs\devsapp" />
+      <recent name="D:\py-source\torna\statics" />
+      <recent name="D:\py-source\mytestpro\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/assets/jquery-2.0.3" />
+      <recent name="D:\py-source\djangofirst\chapter" />
+      <recent name="D:\py-source\djangofirst\static\css" />
+      <recent name="D:\py-source\djangofirst\templates" />
+      <recent name="D:\py-source\" />
+      <recent name="D:\py-source\devs\thml" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -232,71 +587,446 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.api_v2">
-    <configuration name="api_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.testre">
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="devs" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/devsapp" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="devs" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/devsapp/api_v2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
     </configuration>
-    <configuration name="q" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bk_agent_setup_V3.0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="devs" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/devsapp" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="devs" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/devsapp/q.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="devs" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="devs" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="devs" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpsManage-masternew" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpsManage-masternew" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="devs" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpsManage-masternew" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpsManage-masternew" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpsManage-masternew" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="agent" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="agent" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="agent" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpsManage-masternew" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bk_agent_setup_V3.0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bk_agent_setup_V3.0.2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="devs" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="education" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/devsapp" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="education" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
+    <configuration name="loginJD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../testprocject" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="devs" />
+      <module name="testprocject" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/devsapp/views.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../testprocject/loginJD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.views" />
-      <item index="1" class="java.lang.String" itemvalue="Python.api_v2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.q" />
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../redash" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="redash" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../redash/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="simple1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../testprocject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="testprocject" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../testprocject/simple1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="testre" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../testprocject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="testprocject" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../testprocject/testre.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Django server.education" />
+      <item index="1" class="java.lang.String" itemvalue="Python.simple1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.loginJD" />
+      <item index="3" class="java.lang.String" itemvalue="Python.testre" />
+      <item index="4" class="java.lang.String" itemvalue="Python.manage" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.api_v2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.q" />
-        <item index="2" class="java.lang.String" itemvalue="Python.views" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.testre" />
+        <item index="1" class="java.lang.String" itemvalue="Python.manage" />
+        <item index="2" class="java.lang.String" itemvalue="Python.simple1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.loginJD" />
       </list>
     </recent_temporary>
   </component>
@@ -311,31 +1041,41 @@
       <option name="presentableId" value="Default" />
       <updated>1503302058432</updated>
     </task>
+    <task id="LOCAL-00001" summary="chapter、tags、filter">
+      <created>1527238893226</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527238893226</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="45" width="1284" height="722" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229954" sideWeight="0.49317408" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33617747" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27346277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967638" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33617747" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30181542" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20574887" sideWeight="0.5068259" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@devs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36348122" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Ashop" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18941979" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@mytestpro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28498295" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,451 +1084,436 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chapter、tags、filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter、tags、filter" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/dashboard.html</url>
-          <line>10</line>
-          <option name="timeStamp" value="4" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Desktop/OpsManage-master/OpsManage/views/cron.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../chat/client.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://D:/sigmam最新20180510无日志/sigmam/linux/filesystem.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="jinja2-line">
+          <url>file://$PROJECT_DIR$/../OpsManage-masternew/OpsManage-master/OpsManage/templates/users/user_manage.html</url>
+          <line>122</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/index.html</url>
+          <line>270</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/ssh/result.html">
+    <entry file="file://$PROJECT_DIR$/../vue-topo-master/build/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/line_list.html">
+    <entry file="file://$PROJECT_DIR$/../vue-topo-master/src/components/topo/item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vue-topo-master/config/dev.env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vue-topo-master/config/prod.env.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssh/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssh/host_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devs/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Modal_js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/q.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/images/gallery/image-4.jpg">
+    <entry file="file://$PROJECT_DIR$/../vue-topo-master/src/assets/logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/images/gallery/image-6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/images/gallery/image-3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/images/gallery/image-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/images/gallery/image-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/avatars/avatar1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/asset/assModal_js.html">
+    <entry file="file://$PROJECT_DIR$/../vue-topo-master/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="1520">
+          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/asset/assModal.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/authentication/account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="-684">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/javascript.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/query_runner/mysql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="-931">
+          <caret line="143" column="32" lean-forward="false" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/api_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="412" column="28" lean-forward="false" selection-start-line="412" selection-start-column="28" selection-end-line="412" selection-end-column="28" />
-          <folding>
-            <element signature="e#21#41#0" expanded="true" />
-            <element signature="e#476#2606#0" expanded="false" />
-            <element signature="e#4566#4893#0" expanded="false" />
-            <element signature="e#4935#6366#0" expanded="false" />
-            <element signature="e#6438#7375#0" expanded="false" />
-            <element signature="e#8915#10222#0" expanded="false" />
-            <element signature="e#10270#13095#0" expanded="false" />
-            <element signature="e#13150#13709#0" expanded="false" />
-            <element signature="e#13789#16755#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/node_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="78" lean-forward="false" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/device_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/settings/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/head_css.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-301">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Pagination.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/data_sources.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ansible.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/webpack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/models.py">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="43" />
-          <folding>
-            <element signature="e#195#802#0" expanded="false" />
-            <element signature="e#835#2013#0" expanded="false" />
-            <element signature="e#2047#3079#0" expanded="false" />
-            <element signature="e#3114#3436#0" expanded="false" />
-            <element signature="e#3436#3457#0" expanded="false" />
-            <element signature="e#5530#6492#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-11704">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/input.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/monitor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/site-packages/django/forms/templates/django/forms/widgets/password.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-616">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../redash/setup.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/site-packages/django/contrib/auth/password_validation.py">
+    <entry file="file://$PROJECT_DIR$/../redash/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3276">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py">
+    <entry file="file://$PROJECT_DIR$/../redash/requirements_oracle_ds.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2035">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../redash/requirements_dev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/site-packages/django/contrib/auth/models.py">
+    <entry file="file://$PROJECT_DIR$/../redash/requirements_all_ds.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/line_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/asset/ass_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/query_runner/axibase_tsd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-3021">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ans/ansresult.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/query_runner/athena.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssh/hostres_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/changepwd.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/dashboards.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="62" column="62" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="-1311">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/asset/resass_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/queries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1275">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="-2622">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/user_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/layouts/signed_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="456">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/res_add.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/error.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/res_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/widgets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="998">
-          <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="105" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="277">
+          <caret line="73" column="55" lean-forward="true" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/asset/resass_add.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/utils/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="-1414">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/forms.py">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#46#0" expanded="true" />
-            <element signature="e#151#217#0" expanded="false" />
-            <element signature="e#255#321#0" expanded="false" />
-            <element signature="e#275#321#0" expanded="false" />
-            <element signature="e#471#534#0" expanded="false" />
-            <element signature="e#573#636#0" expanded="false" />
-            <element signature="e#669#1001#0" expanded="false" />
-            <element signature="e#1038#1296#0" expanded="false" />
-            <element signature="e#1337#1418#0" expanded="false" />
-            <element signature="e#1457#2653#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-835">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ssh/sshlist.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/useradd.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/reset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/_includes/signed_out_tail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="71" column="74" lean-forward="true" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/_includes/tail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/afterchangepwd.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/templates/emails/invite.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/resuser_list.html">
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/visualizations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../redash/redash/tasks/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../redash/redash/tasks/queries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../redash/redash/handlers/query_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4549">
+          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../incubator-superset/superset/connectors/sqla/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../redash/redash/settings/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
-          <caret line="39" column="62" lean-forward="false" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
-          <folding />
+          <caret line="175" column="40" lean-forward="false" selection-start-line="175" selection-start-column="40" selection-end-line="175" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devs/urls.py">
+    <entry file="file://D:/sigmam最新20180510无日志/sigmam/linux/PROC/80_PROCUtil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="35" column="70" lean-forward="false" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="70" />
-          <folding />
+        <state relative-caret-position="-572">
+          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/views.py">
+    <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/sch_func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="387" column="30" lean-forward="true" selection-start-line="387" selection-start-column="30" selection-end-line="387" selection-end-column="30" />
+        <state relative-caret-position="228">
+          <caret line="184" column="16" lean-forward="false" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/readdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="71" />
           <folding>
-            <element signature="e#23#104#0" expanded="true" />
-            <element signature="e#871#2202#0" expanded="false" />
-            <element signature="e#2257#4372#0" expanded="false" />
-            <element signature="e#4418#5660#0" expanded="false" />
-            <element signature="e#5711#6241#0" expanded="false" />
-            <element signature="e#6277#7193#0" expanded="false" />
-            <element signature="e#7239#8094#0" expanded="false" />
-            <element signature="e#8151#10071#0" expanded="false" />
-            <element signature="e#11233#11389#0" expanded="false" />
-            <element signature="e#13510#13535#0" expanded="false" />
-            <element signature="e#15317#17536#0" expanded="false" />
-            <element signature="e#16239#16254#0" expanded="false" />
+            <element signature="e#43#54#0" expanded="true" />
+            <element signature="e#313#420#0" expanded="false" />
+            <element signature="e#447#521#0" expanded="false" />
+            <element signature="e#934#968#0" expanded="false" />
+            <marker date="1527839298805" expanded="true" signature="545:679" ph="insert into lsofapp... " />
+            <marker date="1527839298805" expanded="true" signature="787:873" ph="insert into lisport... " />
+            <marker date="1527839298805" expanded="true" signature="3469:3603" ph="insert into lsofapp... " />
+            <marker date="1527839298805" expanded="true" signature="4582:4668" ph="insert into lisport... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+    <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/merge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="91" column="65" lean-forward="false" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="78" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/select-insert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
           <folding>
-            <element signature="n#label#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#button#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#22#2009#0" expanded="false" />
+            <marker date="1527839877857" expanded="true" signature="26:2005" ph="SELECT T1HOS... T1HOST" />
+            <marker date="1527839877857" expanded="true" signature="313:1845" ph="SELECT T1HOS... APPNAME" />
+            <marker date="1527839877857" expanded="true" signature="615:1732" ph="SELECT T1.AP... LSOFAPP" />
+            <marker date="1527839877857" expanded="true" signature="2132:2353" ph="select sourc... mergedata" />
+            <marker date="1527839877857" expanded="true" signature="2430:2560" ph="select sourc... merge_link_counts" />
+            <marker date="1527839877857" expanded="true" signature="2699:2874" ph="insert into merge_link_counts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/insertcmdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2337">
+          <caret line="125" column="9" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="9" />
+          <folding>
+            <marker date="1522227666457" expanded="true" signature="648:697" ph="select disti... merge_link_counts" />
+            <marker date="1522227666457" expanded="true" signature="750:797" ph="select disti... merge_link_counts" />
+            <marker date="1522227666457" expanded="true" signature="926:960" ph="select hostn... RES__APP_HOST" />
+            <marker date="1522227666457" expanded="true" signature="1456:1514" ph="select disti... merge_link_counts" />
+            <marker date="1522227666457" expanded="true" signature="1568:1622" ph="select disti... merge_link_counts" />
+            <marker date="1522227666457" expanded="true" signature="1761:1807" ph="select hostn... RES_IP_ADDRESS" />
+            <marker date="1522227666457" expanded="true" signature="2381:2413" ph="select Host,... lisport" />
+            <marker date="1522227666457" expanded="true" signature="2466:2505" ph="select hostn... RES__APP_PORT" />
+            <marker date="1522227666457" expanded="true" signature="3112:3189" ph="select disti... merge_link_counts" />
+            <marker date="1522227666457" expanded="true" signature="3242:3313" ph="select disti... merge_link_counts" />
+            <marker date="1522227666457" expanded="true" signature="3402:3454" ph="select hostn... RES__APP_PROCESS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/collect.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/WORK/ultrapower/资料/lsof获取连接关系/lsoforacle/readdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="89" selection-end-column="121" />
+          <folding>
+            <marker date="1528096054050" expanded="true" signature="2498:3262" ph="..." />
+            <marker date="1528096054050" expanded="true" signature="3282:3416" ph="insert into lsofapp... " />
+            <marker date="1528096054050" expanded="true" signature="4350:4436" ph="insert into lisport... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../testprocject/testre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1528164708165" expanded="true" signature="169:214" ph="select cis,c... app_link_counts" />
           </folding>
         </state>
       </provider>

@@ -39,7 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'devsapp',
     'crispy_forms',
+    'rest_framework',
+    # 'easy_thumbnails',
+    # 'filer',
+    # 'mptt',
+    # 'operation.apps.OperationConfig',
+
 ]
+
+THUMBNAIL_HIGH_RESOLUTION=True
+THUMBNAIL_PROCESSORS={
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,19 +82,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'devs.wsgi.application'
 
-
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES':[
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+#     ]
+# }
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME':'ans',
-        'HOST':'192.168.137.132',
-        'PORT':3306,
-        'USER':'root',
-        'PASSWORD':'',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME':'ans',
+        # 'HOST':'192.168.137.153',
+        # 'PORT':3306,
+        # 'USER':'root',
+        # 'PASSWORD':'',
 
     }
 }
@@ -126,7 +140,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+# AUTH_USER_MODEL='operation.ExtendUser'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
@@ -134,3 +148,5 @@ STATICFILES_DIRS = (
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 LOGIN_URL = '/login/'
+FILE_IGNORE_LIST=''
+DOCUMENT_ROOT='/soft/doc'

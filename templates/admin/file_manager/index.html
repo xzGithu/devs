@@ -1,0 +1,231 @@
+{% extends "admin/file_manager/base.html" %}
+{% load i18n staticfiles %}
+
+{% block bodyclass %}change-list file_manager{% endblock %}
+
+{% block extrastyle %}{{ block.super }}
+
+	<link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "file_manager/css/file_manager.css" %}" />
+	<style type="text/css">
+	span.folder {
+		background-image: url({% static "file_manager/img/folder.png" %});
+	}
+	span.file {
+		background-image: url({% static "file_manager/img/page.png" %});
+	}
+	span.binaryfile {
+		background-image: url({% static "file_manager/img/page_white_camera.png" %});
+	}
+	span.link {
+		background-image: url({% static "file_manager/img/link.png" %});
+	}
+	span.broken_link {
+		background-image: url({% static "file_manager/img/link_break.png" %});
+	}
+	</style>
+
+	<script type="text/javascript" src="{% static "admin/js/core.js" %}"></script> 
+	<script type="text/javascript" src="{% static "admin/js/admin/RelatedObjectLookups.js" %}"></script>
+	<script type="text/javascript" src="{% static "admin/js/jquery.js" %}"></script>
+	<script type="text/javascript" src="{% static "admin/js/jquery.init.js" %}"></script>
+	<script type="text/javascript" src="{% static "admin/js/actions.js" %}"></script>
+
+	<script type="text/javascript">
+	(function($) {
+		$(document).ready(function($) {
+			$("tr input.action-select").actions();
+		});
+	})(django.jQuery);
+	</script> 
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+	<a href="{% url admin_file_manager_index %}../">{% trans "Home" %}</a> &rsaquo;
+	<a href="{% url admin_file_manager_index %}">{% trans "File Manager" %}</a> &rsaquo;
+	{% trans 'Listing' %}
+</div>
+{% endblock %}
+
+{% block coltype %}flex{% endblock %}
+
+{% block content %}
+
+<div id="content-main">
+
+	<h1>Directory: '/{{ directory.url }}'</h1>
+
+    {% block object-tools %}
+		<ul class="object-tools">
+			<li><a href="{% url admin_file_manager_detail directory.url %}" class="historylink">{% trans 'History' %}</a></li>
+
+			{% if directory.can_write %}
+
+			{% if perms.file_manager.can_create_dir %}
+			<li><a href="{% url admin_file_manager_mkdir directory.url %}" class="addlink">{% trans 'Create Directory' %}</a></li>
+			{% endif %}
+
+			{% if perms.file_manager.can_create_link %}
+			<li><a href="{% url admin_file_manager_mkln directory.url %}" class="addlink">{% trans 'Create Link' %}</a></li>
+			{% endif %}
+
+			{% if perms.file_manager.can_create_file %}
+			<li><a href="{% url admin_file_manager_create directory.url %}" class="addlink">{% trans 'Add File' %}</a></li>
+			{% endif %}
+
+			{% if perms.file_manager.can_upload_file %}
+			<li><a href="{% url admin_file_manager_upload directory.url %}" class="addlink">{% trans 'Upload File' %}</a></li>
+			{% endif %}
+			
+			{% endif %}
+        </ul>
+    {% endblock %}
+  
+	<div class="module" id="changelist">
+	<form action="" method="post">
+	{% csrf_token %}
+
+	<div class="actions">
+	{% if directory.url %}<a href="{% url admin_file_manager_list directory.parent %}">Up one Directory</a>{% endif %}
+		<label>Action: 
+		<select name="action"> 
+			<option value="" selected="selected">---------</option>
+			<option value="delete_selected">Delete selected items</option>
+		</select>
+		</label>
+		<button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+
+
+	</div>
+
+<table cellspacing="0">
+	<thead>
+	<tr>
+		<th class="action-checkbox-column" > 
+		<input style="display: inline;" id="action-toggle" type="checkbox">
+
+		</th>
+		<th>Name</th>
+		<th>Size</th>
+		<th>Permissions</th>
+		<th>Created</th>
+		<th>Modified</th>
+		<th>User</th>
+		<th>Group</th>
+		<th colspan="5">Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+
+{% regroup files|dictsortreversed:"directory" by directory as file_list %}
+
+{% for dfile in file_list %}
+
+{% for file in dfile.list|dictsort:"filename" %}
+	<tr class="{% cycle 'row1' 'row2' %}">
+		<td><input class="action-select" value="{{ file.fileurl }}" name="_selected_action" type="checkbox"></td>
+		<td>
+			{% if file.directory %}
+				<span class="folder"><span class="label">[Folder]</span></span>
+			{% else %}
+				
+				<span class="{% if not file.can_edit %}binary{% endif %}file"><span class="label">[File]</span></span>
+			{% endif %}	
+
+			{% if file.broken_link %}
+				{{ file.filename }}
+			{% else %}
+				<a href="{% if file.directory %}{% url admin_file_manager_list file.fileurl %}{% else %}/{{ file.fileurl }}{% endif %}">{{ file.filename }}</a>
+			{% endif %}
+
+            {% if file.link %}
+				<span class="{% if file.broken_link %}broken_{% endif %}link">
+					<span class="label">[{% if file.broken_link %}Broken {% endif %}Link]</span>
+					<span class="link_destination">/{{ file.link_src }}</span>
+				</span>
+            {% endif %}
+		</td>
+		<td>
+			{% if not file.directory %}
+				{{ file.size|filesizeformat }}
+			{% endif %}	
+		</td>
+		<td>{{ file.perms }}</td>
+		<td>{{ file.ctime|date:"m/d/Y" }}</td>
+		<td>{{ file.mtime|date:"m/d/Y" }}</td>
+		<td>{{ file.user }}</td>
+		<td>{{ file.group }}</td>
+
+		<td> 
+			<!--
+			<a href="{% url admin_file_manager_detail file.fileurl %}" class="detaillink">Detail</a> 
+			-->
+		</td>
+
+		<td>
+			{% if not file.directory and not file.broken_link and file.can_edit and perms.file_manager.can_create_file %}
+			<a href="{% url admin_file_manager_update file.fileurl %}" class="changelink">Edit</a> 
+			{% endif %}
+		</td>
+
+		<td>
+			{% if directory.can_write %}
+				{% if file.directory and perms.file_manager.can_rename_dir %}
+				<a href="{% url admin_file_manager_rename file.fileurl %}" class="changelink">Rename</a>
+				{% endif %}
+
+				{% if not file.directory and perms.file_manager.can_rename_file %}
+				<a href="{% url admin_file_manager_rename file.fileurl %}" class="changelink">Rename</a>
+				{% endif %}
+			{% endif %}
+		</td>
+		<td>
+			{% if directory.can_write %}
+				{% if file.directory and perms.file_manager.can_copy_dir %}
+				<a href="{% url admin_file_manager_copy file.fileurl %}" class="changelink">Copy</a>
+				{% endif %}
+
+				{% if not file.directory and perms.file_manager.can_copy_file %}
+				<a href="{% url admin_file_manager_copy file.fileurl %}" class="changelink">Copy</a>
+				{% endif %}
+			{% endif %}
+        </td>
+		<td>
+			{% if directory.can_write %}
+				{% if file.directory and perms.file_manager.can_move_dir %}
+				<a href="{% url admin_file_manager_move file.fileurl %}" class="changelink">Move</a>
+				{% endif %}
+
+				{% if not file.directory and perms.file_manager.can_move_file %}
+				<a href="{% url admin_file_manager_move file.fileurl %}" class="changelink">Move</a>
+				{% endif %}
+			{% endif %}
+		</td>
+		<td>
+			{% if directory.can_write %}
+				{% if file.directory and perms.file_manager.can_delete_dir %}
+				<a href="{% url admin_file_manager_delete file.fileurl %}" class="deletelink">Delete</a>
+				{% endif %}
+				
+				{% if not file.directory and perms.file_manager.can_delete_file %}
+				<a href="{% url admin_file_manager_delete file.fileurl %}" class="deletelink">Delete</a>
+				{% endif %}
+
+			{% endif %}
+		</td>
+	</tr>
+{% endfor %}
+
+{% endfor %}
+	</tbody>
+</table>
+
+<p class="paginator">
+	{{ files|length }} file{{ files|pluralize }}
+</p>
+
+</div>
+
+</form>
+{% endblock %}
