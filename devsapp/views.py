@@ -752,15 +752,6 @@ allconn=defaultdict(list)
 @login_required
 @accept_websocket
 def echo1(request,userid):
-    # if not request.is_websocket():#判断是不是websocket连接
-    #     try:#如果是普通的http方法
-    #         message = request.GET['message']
-    #         return HttpResponse(message)
-    #     except:
-    #         return render(request,'chat.html')
-    # else:
-    #     for message in request.websocket:
-    #         request.websocket.send(message)#发送消息到客户端
     allresult = {}
     # 获取用户信息
     userinfo = request.user
@@ -784,3 +775,6 @@ def echo1(request,userid):
             for i in allconn:
                 if i != str(userid):
                     allconn[i].send(message)
+def anot(request):
+    global a
+    pass
