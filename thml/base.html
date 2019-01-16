@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ace.min.css">
+    <!--link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- 可选的Bootstrap主题文件（一般不使用） -->
+    <!--script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script -->
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">管理平台</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li> -->
+        <li class="dropdown">
+                <a href="#" id="mytabdrop2" class="dropdown-toggle" data-toggle="dropdown">
+                     &nbsp;<span class="badge glyphicon glyphicon-user">user</span>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" ><i class="glyphicon glyphicon-cog"></i> &nbsp;用户设置</a></li><br>
+                    <li><a href="#" ><i class="glyphicon glyphicon-log-out"></i>&nbsp;退出</a></li>
+                    <hr>
+                    <li><a class="" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-user"></i>&nbsp;增加用户</a></li>
+
+                </ul>
+        </li>
+    </ul>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            输入信息
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="用户名">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="密码">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="确认密码">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="aaaa()">
+                            提交更改
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    <div>
+        <ul class="nav navbar-nav">
+        <!--ul class="nav nav-pills" -->
+            <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+            <li><a href="#aler" data-toggle="tab">告警<span class="badge">42</span></a></li>
+            <li class="dropdown">
+                <a href="#" id="mytabdrop1" class="dropdown-toggle" data-toggle="dropdown">
+                    资产 &nbsp;<span class="badge">100</span>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="mytabdrop1">
+                    <li><a href="#server" tabindex="-1" data-toggle="tab">服务器 &nbsp;<span class="badge">25</span></a></li>
+                    <li><a href="#db" tabindex="-1" data-toggle="tab">数据库 &nbsp; <span class="badge">25</span></a></li>
+                    <li><a href="#middle" tabindex="-1" data-toggle="tab">中间件 &nbsp;<span class="badge">25</span></a></li>
+                    <li class="divider"></li>
+                    <li><a href="#other" tabindex="-1" data-toggle="tab">其他 &nbsp;<span class="badge">25</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+
+<div class="container" style="width: 90%;">
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="home">
+		<div class="table-responsive">
+        <table class="table table-strip table-bordered">
+            <thead>
+           <tr>
+             <th>#</th>
+             <th>Name</th>
+             <th>Street</th>
+             <th>操作</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>1</td>
+             <td>Anna Awesome</td>
+             <td>Broome Street</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>2</td>
+             <td>Debbie Dallas</td>
+             <td>Houston Street</td>
+             <td></td>
+           </tr>
+           <tr>
+             <td>3</td>
+             <td>John Doe</td>
+             <td>Madison Street</td>
+             <td style="text-align: center;"><a>修改</a><a>&nbsp;&nbsp;&nbsp;</a><a>删除</a></td>
+           </tr>
+         </tbody>
+        </table>
+    </div>
+	</div>
+	<div class="tab-pane fade" id="aler">
+        <p>没有</p>
+	</div>
+	<div class="tab-pane fade" id="server">
+		<p>server</p>
+	</div>
+	<div class="tab-pane fade" id="db">
+		<p>db
+		</p>
+	</div>
+    <div class="tab-pane fade" id="middle">
+		<p>middleware
+		</p>
+	</div>
+    <div class="tab-pane fade" id="other">
+		<p>other
+		</p>
+	</div>
+</div>
+</div>
+<div class="container" style="width: 90%">
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ace.min.js"></script>
+
+</body>
+</html>

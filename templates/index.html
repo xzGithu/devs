@@ -32,10 +32,8 @@
 						</small>
 					</a><!-- /.brand -->
 				</div><!-- /.navbar-header -->
-
 				<div class="navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="{% static 'assets/avatars/user.jpg' %}" alt="Jason's Photo" />
@@ -51,32 +49,29 @@
 
 								<i class="icon-caret-down"></i>
 							</a>
-
 							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                                                              {% if user.is_authenticated %}
+                                  {% if user.is_authenticated %}
                                     <li>
 									<a href="{% url 'logout' %}">
 										<i class="ace-icon fa fa-power-off"></i>
 										注销
 									</a>
-								</li>
-                                    {% else %}
-								<li>
+								    </li>
+                                  {% else %}
+								    <li>
 									<a href="{% url 'login'%}">
 										<i class="ace-icon fa fa-user"></i>
 										登录
 									</a>
-								</li>
-                                {% endif %}
-
-                                <li class="divider"></li>
-                                <li>
+								    </li>
+                                  {% endif %}
+                                  <li class="divider"></li>
+                                  <li>
 									<a href="{% url 'changepwd' %}">
 										<i class="ace-icon fa fa-cog"></i>
 										更改密码
 									</a>
-								</li>
-
+								  </li>
 					        </ul>
 						</li>
 					</ul><!-- /.ace-nav -->
@@ -130,7 +125,7 @@
 					</div><!-- #sidebar-shortcuts -->
 
 					<ul class="nav nav-list">
-
+<!-- kongzhitai> -->
 						<li class="">
 							<!-- <a href="index.html"> -->
                             <a href="{% url 'index'%}">
@@ -138,46 +133,35 @@
 								<span class="menu-text"> 控制台 </span>
 							</a>
 						</li>
-
-                        {% if   '/shedit/' in request.path or '/scadd/' in request.path or '/run_ssh_cmd/' in request.path or '/run_ans_cmd/' in request.path or 'listsc' in request.path%}
-                            <li class="active open" >
-                        {% else %}
-                            <li class="">
-                        {% endif %}
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-tasks"></i>
-								<span class="menu-text"> SSH </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
+<!-- SSH> -->
+                      {% if   '/shedit/' in request.path or '/scadd/' in request.path or '/run_ssh_cmd/' in request.path or '/run_ans_cmd/' in request.path or 'listsc' in request.path%}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                        <a href="#" class="dropdown-toggle">
+                            <i class="icon-tasks"></i>
+                            <span class="menu-text"> SSH </span>
+                            <b class="arrow icon-angle-down"></b>
+                        </a>
 
 							<ul class="submenu">
-                        {% if '/listsc/' in request.path %}
+                            {% if '/listsc/' in request.path %}
                             <li class="active" >
-                        {% else %}
+                            {% else %}
                             <li class="">
-                        {% endif %}
+                            {% endif %}
                             <a href="{% url 'listsc' %}">
-						    <i class="icon-double-angle-right"></i>
-										脚本管理
-							</a>
-						    </li>
-{#                        {% if '/scadd/' in request.path %}#}
-{#                            <li class="active" >#}
-{#                        {% else %}#}
-{#                            <li class="">#}
-{#                        {% endif %}#}
-{#                            <a href="{% url 'addscripts' %}">#}
-{#						    <i class="icon-double-angle-right"></i>#}
-{#										脚本增加#}
-{#							</a>#}
-{#						    </li>#}
+                            <i class="icon-double-angle-right"></i>
+                                    脚本管理
+                            </a>
+                            </li>
 
-                        {% if '/run_ssh_cmd/' in request.path %}
+                            {% if '/run_ssh_cmd/' in request.path %}
                              <li class="active" >
-                        {% else %}
+                            {% else %}
                              <li class="">
-                        {% endif %}
+                            {% endif %}
 							<a href="{% url 'run_ssh_cmd' %}">
 							<i class="icon-double-angle-right"></i>
 									执行命令
@@ -185,81 +169,119 @@
 							</li>
 							</ul>
 						</li>
-                        {% if '/asset/' in request.path or '/add/host' in request.path %}
-                            <li class="active open" >
-                                {% else %}
-                                <li class="">
-                            {% endif %}
-
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-th-large"></i>
-								<span class="menu-text"> 资产管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
+<!-- zichanguanli> -->
+                      {% if '/asset/' in request.path or '/add/host' in request.path %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                        <a href="#" class="dropdown-toggle">
+                            <i class="icon-th-large"></i>
+                            <span class="menu-text"> 资产管理 </span>
+                            <b class="arrow icon-angle-down"></b>
+                        </a>
 
 						<ul class="submenu">
 				            {% if '/lists/asset/' in request.path %}
                             <li class="active" >
-                                {% else %}
-                                <li class="">
+                            {% else %}
+                            <li class="">
                             {% endif %}
-
-                                    <a href="{% url 'lists' table='asset' %}">
-										<i class="icon-double-angle-right"></i>
+                            <a href="{% url 'lists' table='asset' %}">
+                                <i class="icon-double-angle-right"></i>
 										资产列表
-									</a>
-								</li>
+                            </a>
+                            </li>
                             {% if '/add/host/' in request.path %}
                             <li class="active" >
-                                {% else %}
-                                <li class="">
+                            {% else %}
+                            <li class="">
                             {% endif %}
-
-                                    <a href="{% url 'add' table='host' %}">
-										<i class="icon-double-angle-right"></i>
+                            <a href="{% url 'add' table='host' %}">
+                                <i class="icon-double-angle-right"></i>
 										添加主机
-									</a>
-								</li>
+                            </a>
+                            </li>
                         </ul>
 						</li>
-                            {% if '/user' in request.path   %}
-                            <li class="active open" >
+<!-- zichanguanli> -->
+                      {% if '/socp/' in request.path %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                        <a href="#" class="dropdown-toggle">
+                            <i class="icon-th-large"></i>
+                            <span class="menu-text"> 聊天管理 </span>
+                            <b class="arrow icon-angle-down"></b>
+                        </a>
 
-                                {% else %}
+						<ul class="submenu">
+				            {% if 'socp' in request.path %}
+                            <li class="active" >
+                            {% else %}
                             <li class="">
+                            {% endif %}
+                            <a href="{% url 'socp' request.user %}">
+                                <i class="icon-double-angle-right"></i>
+										chat
+                            </a>
+                            </li>
+                        </ul>
+						</li>
+<!--yonghuguanli> -->
+                      {% if '/user' in request.path   %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                      <a href="#" class="dropdown-toggle">
+                        <i class="icon-user"></i>
+                        <span class="menu-text"> 用户管理 </span>
+                        <b class="arrow icon-angle-down"></b>
+                      </a>
+                        <ul class="submenu">
+                        {% if '/user/' in request.path   %}
+                          <li class="active open" >
+                        {% else %}
+                          <li class="">
                         {% endif %}
-
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-user"></i>
-								<span class="menu-text"> 用户管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-							{% if '/user/' in request.path   %}
+                            <a href="{% url 'lists' table='user' %}">
+                                <i class="icon-double-angle-right"></i>
+                                用户列表
+                            </a>
+                           </li>
+                         </ul>
+                        </li>
+<!--xineng guanli> -->
+                      {% if '/gethostper' in request.path   %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                        <a href="#" class="dropdown-toggle">
+                            <i class="icon-table"></i>
+                            <span class="menu-text"> 性能展示 </span>
+                            <b class="arrow icon-angle-down"></b>
+                        </a>
+                        <ul class="submenu">
+                          {% if '/gethostper/' in request.path   %}
                             <li class="active open" >
-
-                                {% else %}
+                          {% else %}
                             <li class="">
-                        {% endif %}
-                                    <a href="{% url 'lists' table='user' %}">
-										<i class="icon-double-angle-right"></i>
-										用户列表
-									</a>
-								</li>
-
-
-
-							</ul>
+                          {% endif %}
+                            <a href="{% url 'gethostper' %}">
+                                <i class="icon-double-angle-right"></i>
+                                cpu
+                            </a>
+                            </li>
+                        </ul>
 						</li>
 					</ul><!-- /.nav-list -->
 
-					<div class="sidebar-collapse" id="sidebar-collapse">
-						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
-					</div>
-
+                    <div class="sidebar-collapse" id="sidebar-collapse">
+                        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                    </div>
 					<script type="text/javascript">
 						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
 					</script>

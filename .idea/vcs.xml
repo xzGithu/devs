@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="D:/Git" vcs="Git" />
+    <mapping directory="D:/Git/djangofirst" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../incubator-superset" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../redash" vcs="Git" />
+  </component>
+</project>

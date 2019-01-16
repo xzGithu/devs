@@ -10,8 +10,10 @@ import paramiko
 # from django.views.generic.edit import FormView
 # from api_v2 import ANSRunner
 import json,uuid,os
-from forms import *
+from .forms import *
 from django.contrib.auth.models import User,Group
+import MySQLdb
+from dwebsocket.decorators import accept_websocket,require_websocket
 # from devsapp.ansible_runner.runner import AdHocRunner,PlayBookRunner
 # from devsapp.ansible_runner.callback import CommandResultCallback
 
@@ -208,8 +210,6 @@ def assupd(request,table,pk):
 
     if request.method == 'POST':
         # ip = Assets.objects.filter(pk=pk)
-
-
         try:
             resource = []
             dict = {}
@@ -462,7 +462,7 @@ def shell(request, nid):  ##执行脚本页面
     # print nid
     if request.method == "GET":
         obj = Assets.objects.filter(id__gt=0)
-        # print obj
+        print obj
         sh = ToolsScript.objects.filter(id=nid)
 
         return render(request, 'scripts/shell.html', {"host_list": obj, "sh": sh})
@@ -730,3 +730,57 @@ def host_web_ssh(request):   ##  web ssh 登陆
 
 # def commandapi(request):
 #     if request.method == "POST":
+@login_required
+def gethostper(request):
+    connect=MySQLdb.connect(host="192.168.182.179",user="root",passwd="",db="zabbix",port=3306)
+    cursor=connect.cursor()
+    cursor.execute("select clock,value from history_uint where itemid=28564 limit 100")
+    datas=cursor.fetchall()
+    times=[]
+    values=[]
+    for i in datas:
+        times.append(int(i[0]))
+        values.append(int(i[1]))
+    return render(request,'asset/data.html',{"time":times,"value":values})
+
+def echodata(request,data):
+    return HttpResponse(data)
+
+from collections import  defaultdict
+allconn=defaultdict(list)
+
+@login_required
+@accept_websocket
+def echo1(request,userid):
+    # if not request.is_websocket():#判断是不是websocket连接
+    #     try:#如果是普通的http方法
+    #         message = request.GET['message']
+    #         return HttpResponse(message)
+    #     except:
+    #         return render(request,'chat.html')
+    # else:
+    #     for message in request.websocket:
+    #         request.websocket.send(message)#发送消息到客户端
+    allresult = {}
+    # 获取用户信息
+    userinfo = request.user
+    allresult['userinfo'] = userinfo
+    # 声明全局变量
+    global allconn
+    if not request.is_websocket():  # 判断是不是websocket连接
+        try:  # 如果是普通的http方法
+            message = request.GET['message']
+            return HttpResponse(message)
+        except:
+            return render(request, 'chat.html', allresult)
+    else:
+        # 将链接(请求？)存入全局字典中
+        allconn[str(userid)] = request.websocket
+        # 遍历请求地址中的消息
+        for message in request.websocket:
+            # 将信息发至自己的聊天框
+            request.websocket.send(message)
+            # 将信息发至其他所有用户的聊天框
+            for i in allconn:
+                if i != str(userid):
+                    allconn[i].send(message)

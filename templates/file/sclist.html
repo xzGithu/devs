@@ -1,0 +1,36 @@
+{% extends "file/listsc.html" %}
+{% block search %}
+
+    <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="name" >name</span>
+                         <!-- 如果之前已经写入了node_name的信息，那么页面重新加载后保留-->
+                            <input type="text" class="form-control" placeholder="" aria-describedby="name" name="name"
+                                    {% if request.GET.username %}value = {{ request.GET.username }}{% endif %}>
+                        </div>
+                     </div>
+
+{#                     <div class="col-sm-3">#}
+{#                        <div class="input-group">#}
+{#                            <span class="input-group-addon" id="node_address">ip</span>#}
+{#                            <input type="text" class="form-control" placeholder="" aria-describedby="ip" name = "ip"#}
+{#                                    {% if request.GET.node_address %}value = {{ request.GET.node_address }}{% endif %}>#}
+{#                        </div>#}
+{#                     </div>#}
+
+
+
+{% endblock %}
+
+{% block table_tr %}
+
+<th>name</th>
+<th>info</th>
+
+
+
+{% endblock %}
+{% block table_td %}
+<td>{{item.name}}</td>
+<td>{{item.comment}}</td>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h2>表格</h2>
+<div class="table-responsive">
+<table class="table table-strip table-bordered">
+    <thead>
+   <tr>
+     <th>#</th>
+     <th>Name</th>
+     <th>Street</th>
+     <th>操作</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td>1</td>
+     <td>Anna Awesome</td>
+     <td>Broome Street</td>
+     <td></td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>Debbie Dallas</td>
+     <td>Houston Street</td>
+     <td></td>
+   </tr>
+   <tr>
+     <td>3</td>
+     <td>John Doe</td>
+     <td>Madison Street</td>
+     <td style="text-align: center;"><a>修改</a><a>&nbsp;&nbsp;&nbsp;</a><a>删除</a></td>
+   </tr>
+ </tbody>
+</table>
+</div>
+<h2>图像</h2>
+<p>创建响应式图片(将扩展到父元素)。 另外：图片以椭圆型展示：</p>
+<img src="cinqueterre.jpg" class="img-responsive img-circle" alt="Cinque Terre" width="304" height="236">
+
+<h2>图标</h2>
+<p>插入图标:</p>
+<p>云图标: <span class="glyphicon glyphicon-cloud"></span></p>
+<p>信件图标: <span class="glyphicon glyphicon-envelope"></span></p>
+<p>搜索图标: <span class="glyphicon glyphicon-search"></span></p>
+<p>打印图标: <span class="glyphicon glyphicon-print"></span></p>
+<p>下载图标：<span class="glyphicon glyphicon-download"></span></p>
+{% endblock %}

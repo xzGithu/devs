@@ -37,6 +37,8 @@ urlpatterns = [
     url(r'logout/', devsapp.views.logout, name='logout'),
     url(r'password_change/', devsapp.views.password_change, name='password_change'),
     url(r'^run_ssh_cmd/', devsapp.views.cmd_commands, name='run_ssh_cmd'),
+    url(r'gethostper/',devsapp.views.gethostper,name="gethostper"),
+    url(r'^echodata/',devsapp.views.echodata),
     # url(r'^run_ans_cmd/', devsapp.views.ans_module, name='run_ans_cmd'),
     url(r'^assadd/(?P<table>\w+)/$', devsapp.views.assetadd, name='assadd'),
     url(r'^assupd/(?P<table>\w+)/(?P<pk>\d+)/$', devsapp.views.assupd, name='assupd'),
@@ -56,6 +58,7 @@ urlpatterns = [
     url(r'^shell.html$', devsapp.views.shell_sh, name="shell_sh"),
     url(r'scadd/',devsapp.views.add_scripts,name='addscripts'),
     url(r'^webssh$', devsapp.views.host_web_ssh, name='webssh'),
+    url(r'^socp/(?P<userid>\w+)$', devsapp.views.echo1, name='socp'),
     # url(r'^filer/',include('filer.urls')),
     # url(r'^apps_models/',devsapp.views.apps_model,name="apps_model")
     # url(r'^operation/',include('operation.urls.views_urls',namespace='operation')),

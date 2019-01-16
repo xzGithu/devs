@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-
+import django_redis
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+# from django.core.cache import cache
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -24,11 +24,20 @@ SECRET_KEY = 'qpj0@fv)td8!f7@h0fh%g22swxt_l4j0!a2^tw5@6x2c350=d!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
+# DEBUG = False
+ALLOWED_HOSTS = ['*']
 
 # Application definition
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+             # "PASSWORD": "yoursecret",
+        },
+    },
+}
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -147,6 +156,8 @@ STATICFILES_DIRS = (
 )
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-LOGIN_URL = '/login/'
+# LOGIN_URL = '/login/'
+# LOGIN_URL='/course/mine/'
 FILE_IGNORE_LIST=''
 DOCUMENT_ROOT='/soft/doc'
+# LOGIN_REDIRECT_URL='/course/mine/'
