@@ -776,4 +776,5 @@ def echo1(request,userid):
                 if i != str(userid):
                     allconn[i].send(message)
 def anot(request):
+    global a
     pass
