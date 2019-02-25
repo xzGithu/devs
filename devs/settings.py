@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-import django_redis
+# import django_redis
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -161,3 +161,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 FILE_IGNORE_LIST=''
 DOCUMENT_ROOT='/soft/doc'
 # LOGIN_REDIRECT_URL='/course/mine/'
+# FILE_UPLOAD_MAX_SIZE=10240

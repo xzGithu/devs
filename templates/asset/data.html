@@ -10,12 +10,25 @@
    <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main12'));
         var option = {
+
+     tooltip: {
+         trigger:'axis',
+         formatter: function(params) {
+            return params[0].value;
+        }
+    },
+    title: {
+        text: 'cpu趋势图'
+    },
     xAxis: {
         type: 'category',
         data: {{ time|safe }}
     },
     yAxis: {
-        type: 'value'
+        type: 'value',
+{#        axisLabel : {#}
+{#                formatter: '{value} °C'#}
+{#            }#}
     },
     series: [{
         data: {{ value|safe }},

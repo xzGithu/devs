@@ -59,8 +59,7 @@ def get_max_upload_size():
     "Pull the FILE_UPLOAD_MAX_SIZE from settings."
 
     if not settings.FILE_UPLOAD_MAX_SIZE:
-        raise ImproperlyConfigured, 'file_manager requires FILE_UPLOAD_MAX_SIZE variable be defined in settings.py' 
-
+        raise ImproperlyConfigured, 'file_manager requires FILE_UPLOAD_MAX_SIZE variable be defined in settings.py'
     return settings.FILE_UPLOAD_MAX_SIZE
 
 def get_document_root():
@@ -68,10 +67,8 @@ def get_document_root():
     Pull the DOCUMENT_ROOT variable from settings. This variable is
     specific to this application.
     """
-
     if not settings.DOCUMENT_ROOT:
-        raise ImproperlyConfigured, 'file_manager requires DOCUMENT_ROOT variable be defined in settings.py' 
-
+        raise ImproperlyConfigured, 'file_manager requires DOCUMENT_ROOT variable be defined in settings.py'
     return settings.DOCUMENT_ROOT
 
 def clean_path(url):
@@ -185,7 +182,7 @@ def log_deletion(request, object, object_repr):
 
 
 
-def bash_writer(*args,**kwargs):
+def  bash_writer(*args,**kwargs):
     return bash_head(*args,**kwargs)
 
 def bash_head(author,time,*args,**kwargs):#author time

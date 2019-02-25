@@ -16,19 +16,14 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="OpsManage-masternew" />
     <orderEntry type="module" module-name="errbot-master" />
-    <orderEntry type="module" module-name="sigmam最新20180103" />
     <orderEntry type="module" module-name="apyori-master" />
-    <orderEntry type="module" module-name="sigmam最新20180103" />
     <orderEntry type="module" module-name="training" />
     <orderEntry type="module" module-name="lsoforacle-v1" />
     <orderEntry type="module" module-name="lsoforacle-v1" />
-    <orderEntry type="module" module-name="lsoforacle-v4" />
-    <orderEntry type="module" module-name="ultrapro" />
     <orderEntry type="module" module-name="webui" />
-    <orderEntry type="module" module-name="proapi" />
     <orderEntry type="module" module-name="py34test" />
-    <orderEntry type="module" module-name="py37test" />
-    <orderEntry type="module" module-name="py37test" />
+    <orderEntry type="module" module-name="djvu" />
+    <orderEntry type="module" module-name="vue-frame" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
