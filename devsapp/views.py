@@ -11,7 +11,7 @@ import paramiko
 from rest_framework.serializers import ModelSerializer
 # from django.views.generic.edit import FormView
 # from api_v2 import ANSRunner
-import json,uuid,os
+import json,uuid
 from .forms import *
 from django.contrib.auth.models import User,Group
 import MySQLdb
