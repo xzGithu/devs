@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="425fce87-7e79-46d4-81b1-7956eb52dec5" name="Default" comment="chapter、tags、filter">
+    <list id="425fce87-7e79-46d4-81b1-7956eb52dec5" name="Default" comment="chapter、tags、filter" />
+    <list default="true" id="7bdfe188-33f4-4f85-996e-6c3d84850fec" name="DAT-4 Build datatopo #13 failed" comment="DAT-4 Build datatopo #13 failed">
       <change type="NEW" beforePath="" afterPath="D:/Git/training/static/assets/avatars/Thumbs.db" />
       <change type="NEW" beforePath="" afterPath="D:/Git/training/static/assets/avatars/avatar.png" />
       <change type="NEW" beforePath="" afterPath="D:/Git/training/static/assets/avatars/avatar1.png" />
@@ -209,20 +210,10 @@
       <change type="NEW" beforePath="" afterPath="D:/Git/webui/useraction/templatetags/errbotag.py" />
       <change type="NEW" beforePath="" afterPath="D:/Git/webui/useraction/test.py" />
       <change type="NEW" beforePath="" afterPath="D:/Git/webui/useraction/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../incubator-superset/superset/assets/src/visualizations/echarts_funnel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="D:/Git/djangofirst/.idea/djangofirst.iml" afterPath="D:/Git/djangofirst/.idea/djangofirst.iml" />
       <change type="MODIFICATION" beforePath="D:/Git/education/.idea/education.iml" afterPath="D:/Git/education/.idea/education.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/devs.iml" afterPath="$PROJECT_DIR$/.idea/devs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devs/settings.py" afterPath="$PROJECT_DIR$/devs/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devs/urls.py" afterPath="$PROJECT_DIR$/devs/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devsapp/utils.py" afterPath="$PROJECT_DIR$/devsapp/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/data.html" afterPath="$PROJECT_DIR$/templates/asset/data.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../incubator-superset/superset/assets/src/visualizations/index.js" afterPath="$PROJECT_DIR$/../incubator-superset/superset/assets/src/visualizations/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../incubator-superset/superset/viz.py" afterPath="$PROJECT_DIR$/../incubator-superset/superset/viz.py" />
     </list>
@@ -344,7 +335,20 @@
     <favorites_list name="devs" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/devsapp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="70" lean-forward="true" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+              <folding>
+                <marker date="1551255219788" expanded="true" signature="27904:27969" ph="select clock... history_uint" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -395,14 +399,22 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="xz" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="DAT-4" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="D:/Install/python3764/Lib/site-packages/plantuml.py" />
-        <option value="$PROJECT_DIR$/../testprocject/apyori.py" />
         <option value="$PROJECT_DIR$/../py37test/wsss.py" />
         <option value="$PROJECT_DIR$/../py37test/gui/tkintertest.py" />
         <option value="D:/Install/python33/Lib/site-packages/plantuml.py" />
@@ -452,6 +464,8 @@
         <option value="$PROJECT_DIR$/../djvu/books/views.py" />
         <option value="$PROJECT_DIR$/../djvu/appfront/src/router/index.js" />
         <option value="$PROJECT_DIR$/../vue-frame/vue-framework-wz-master/src/router/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/devsapp/views.py" />
       </list>
     </option>
   </component>
@@ -522,12 +536,8 @@
             </path>
             <path>
               <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vue-frame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vue-frame" type="462c0819:PsiDirectoryNode" />
-              <item name="vue-framework-wz-master" type="462c0819:PsiDirectoryNode" />
+              <item name="devs" type="462c0819:PsiDirectoryNode" />
+              <item name="devsapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -537,7 +547,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="tasks.servers" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue-frame" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -546,6 +556,8 @@
     <property name="nodejs_interpreter_path" value="D:/Install/npm/node" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="tasks.open.task.update.state.enabled" value="true" />
+    <property name="tasks.close.task.update.state.enabled" value="true" />
   </component>
   <component name="Push.Settings">
     <excluded-roots>
@@ -1168,9 +1180,11 @@
       <item index="3" class="java.lang.String" itemvalue="Python.sss" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.sss" />
         <item index="1" class="java.lang.String" itemvalue="Python.opensssss" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sss" />
+        <item index="3" class="java.lang.String" itemvalue="Python.opensssss" />
       </list>
     </recent_temporary>
   </component>
@@ -1181,12 +1195,12 @@
     <configuration>C:\Users\哲\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
       <changelist id="425fce87-7e79-46d4-81b1-7956eb52dec5" name="Default" comment="" />
       <created>1503302058432</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1503302058432</updated>
+      <updated>1551253961098</updated>
     </task>
     <task id="LOCAL-00001" summary="chapter、tags、filter">
       <created>1527238893226</created>
@@ -1209,8 +1223,81 @@
       <option name="project" value="LOCAL" />
       <updated>1528790505775</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
-    <servers />
+    <task id="LOCAL-00004" summary="chapter、tags、filter">
+      <created>1551063151153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551063151153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add jenkins">
+      <created>1551083958845</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551083958845</updated>
+    </task>
+    <task id="LOCAL-00006" summary="APP-4 提交form,测试jenkins-jira集成">
+      <created>1551085953965</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551085953965</updated>
+    </task>
+    <task id="LOCAL-00007" summary="APP-3 提交">
+      <branch name="dev" repository="D:\py-source\devs" />
+      <branch name="master" repository="D:\py-source\redash" />
+      <branch name="master" repository="D:\py-source\incubator-superset" />
+      <branch name="master" repository="D:\Git" />
+      <branch name="master" repository="D:\Git\djangofirst" />
+      <created>1551087590356</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551254057187</updated>
+    </task>
+    <task active="true" id="DAT-4" summary="Build datatopo #13 failed">
+      <branch name="dev" repository="D:\py-source\devs" original="true" />
+      <branch name="master" repository="D:\py-source\redash" original="true" />
+      <branch name="master" repository="D:\py-source\incubator-superset" original="true" />
+      <branch name="master" repository="D:\Git" original="true" />
+      <branch name="master" repository="D:\Git\djangofirst" original="true" />
+      <branch name="DAT-4" repository="D:\py-source\devs" />
+      <branch name="DAT-4" repository="D:\py-source\redash" />
+      <branch name="DAT-4" repository="D:\py-source\incubator-superset" />
+      <branch name="DAT-4" repository="D:\Git" />
+      <branch name="DAT-4" repository="D:\Git\djangofirst" />
+      <changelist id="7bdfe188-33f4-4f85-996e-6c3d84850fec" name="DAT-4 Build datatopo #13 failed" comment="" />
+      <created>1551230815000</created>
+      <option name="issue" value="true" />
+      <url>http://192.168.182.179:38080/browse/DAT-4</url>
+      <option name="number" value="4" />
+      <option name="presentableId" value="DAT-4" />
+      <option name="project" value="DAT" />
+      <updated>1551254122415</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers>
+      <JIRA shared="false" url="http://192.168.182.179:38080">
+        <option name="apiType" value="REST_2_0" />
+        <commitMessageFormat>{id} {summary}</commitMessageFormat>
+        <password>df9bdfdbdfcbdfd0dfeadffddff9dff2</password>
+        <option name="inCloud" value="false" />
+        <option name="jiraVersion" value="7.13.0" />
+        <option name="loginAnonymously" value="false" />
+        <option name="preferredCloseTaskState">
+          <CustomTaskState id="41" predefined="false" name="完成" />
+        </option>
+        <option name="preferredOpenTaskState">
+          <CustomTaskState id="21" predefined="false" name="处理中" />
+        </option>
+        <option name="searchQuery" value="assignee = currentUser() and resolution = Unresolved order by updated" />
+        <option name="shouldFormatCommitMessage" value="false" />
+        <option name="useHttpAuthentication" value="true" />
+        <option name="useProxy" value="false" />
+        <username>jiraadmin</username>
+      </JIRA>
+    </servers>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1223,12 +1310,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860817" sideWeight="0.66951567" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22163388" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29863483" sideWeight="0.4742814" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1291,52 +1379,29 @@
       <path value="$PROJECT_DIR$/../djangofirst" />
     </ignored-roots>
     <MESSAGE value="chapter、tags、filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter、tags、filter" />
+    <MESSAGE value="add jenkins" />
+    <MESSAGE value="APP-4 提交form,测试jenkins-jira集成" />
+    <MESSAGE value="APP-3 提交" />
+    <MESSAGE value="DAT-4 Build datatopo #13 failed" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAT-4 Build datatopo #13 failed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/Desktop/OpsManage-master/OpsManage/views/cron.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../chat/client.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://D:/sigmam最新20180510无日志/sigmam/linux/filesystem.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="jinja2-line">
-          <url>file://$PROJECT_DIR$/../OpsManage-masternew/OpsManage-master/OpsManage/templates/users/user_manage.html</url>
-          <line>122</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/templates/index.html</url>
-          <line>267</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
       <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../djvu/appfront/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../djvu/appfront/src/pages/index/index.vue" />
     <entry file="file://$PROJECT_DIR$/../djvu/appfront/src/pages/cell/cell.html" />
     <entry file="file://$PROJECT_DIR$/../djvu/appfront/build/webpack.base.conf.js">
@@ -1584,13 +1649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devsapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="585" column="28" lean-forward="true" selection-start-line="585" selection-start-column="28" selection-end-line="585" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../djvu/appfront/src/components/detail.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1603,7 +1661,7 @@
         <state relative-caret-position="190">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1613,7 +1671,7 @@
         <state relative-caret-position="1197">
           <caret line="139" column="46" lean-forward="false" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="false" />
             <element signature="e#677#962#0" expanded="false" />
             <element signature="e#1022#1338#0" expanded="false" />
             <element signature="e#1791#2241#0" expanded="false" />
@@ -1679,9 +1737,9 @@
         <state relative-caret-position="1007">
           <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
           <folding>
-            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-button#0;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-button#1;n#el-form-item#2;n#el-form#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -1705,6 +1763,29 @@
         <state relative-caret-position="19">
           <caret line="142" column="25" lean-forward="false" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="95">
+            <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devsapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="70" lean-forward="true" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+          <folding>
+            <marker date="1551255219788" expanded="true" signature="27904:27969" ph="select clock... history_uint" />
+          </folding>
         </state>
       </provider>
     </entry>
