@@ -14,16 +14,42 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 2.7.13 (D:\Install\python27\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="OpsManage-masternew" />
-    <orderEntry type="module" module-name="errbot-master" />
     <orderEntry type="module" module-name="apyori-master" />
     <orderEntry type="module" module-name="training" />
     <orderEntry type="module" module-name="lsoforacle-v1" />
     <orderEntry type="module" module-name="lsoforacle-v1" />
-    <orderEntry type="module" module-name="webui" />
     <orderEntry type="module" module-name="py34test" />
+    <orderEntry type="module" module-name="jenkinsweb" />
     <orderEntry type="module" module-name="djvu" />
-    <orderEntry type="module" module-name="vue-frame" />
+    <orderEntry type="module" module-name="py37test" />
+    <orderEntry type="module" module-name="SigmaCagent" />
+    <orderEntry type="module" module-name="androids" />
+    <orderEntry type="module" module-name="androids" />
+    <orderEntry type="module" module-name="androids" />
+    <orderEntry type="module" module-name="UltraBASpark" />
+    <orderEntry type="module" module-name="androids" />
+    <orderEntry type="module" module-name="UltraBASpark" />
+    <orderEntry type="module" module-name="hte4jwebos" />
+    <orderEntry type="module" module-name="aws" />
+    <orderEntry type="module" module-name="raspber" />
+    <orderEntry type="module" module-name="palms" />
+    <orderEntry type="module" module-name="object-detection-deep-learning" />
+    <orderEntry type="module" module-name="tensorrt_demos-master" />
+    <orderEntry type="module" module-name="handtracking-master" />
+    <orderEntry type="module" module-name="models" />
+    <orderEntry type="module" module-name="vue-fresh" />
+    <orderEntry type="module" module-name="tensorfscripts" />
+    <orderEntry type="module" module-name="bert-as-service-master" />
+    <orderEntry type="module" module-name="ubaojia" />
+    <orderEntry type="module" module-name="baojiavue" />
+    <orderEntry type="module" module-name="MxShop" />
+    <orderEntry type="module" module-name="ML-code" />
+    <orderEntry type="module" module-name="ansible29-python" />
+    <orderEntry type="module" module-name="ansible29-python" />
+    <orderEntry type="module" module-name="celerysapp" />
+    <orderEntry type="module" module-name="autodeploy" />
+    <orderEntry type="module" module-name="MxShop" />
+    <orderEntry type="module" module-name="untitled" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

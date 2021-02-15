@@ -13,7 +13,6 @@ from ansible.plugins.callback import CallbackBase
 from ansible.executor.playbook_executor import PlaybookExecutor
 
 
-
 class MyInventory(Inventory):
     """
     this is my ansible inventory object.

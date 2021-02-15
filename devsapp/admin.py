@@ -19,8 +19,11 @@ class DeviceAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.device_signer = str(request.user)
         obj.save()
+class TaskAdmin(admin.ModelAdmin):
+    list_display = ['taskname','tasksteps']
 admin.site.register(Node,NodeAdmin)
 admin.site.register(Line,LineAdmin)
 admin.site.register(Device,DeviceAdmin)
 admin.site.register(Assets)
 admin.site.register(ToolsScript)
+admin.site.register(TaskScripts,TaskAdmin)

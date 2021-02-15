@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../OpsManage-masternew/.idea/OpsManage-masternew.iml" filepath="$PROJECT_DIR$/../OpsManage-masternew/.idea/OpsManage-masternew.iml" />
-      <module fileurl="file://D:/apyori-master/.idea/apyori-master.iml" filepath="D:/apyori-master/.idea/apyori-master.iml" />
+      <module fileurl="file://D:/ML-code/.idea/ML-code.iml" filepath="D:/ML-code/.idea/ML-code.iml" />
+      <module fileurl="file://D:/Download/coding-131-master/coding-131/MxShop/.idea/MxShop.iml" filepath="D:/Download/coding-131-master/coding-131/MxShop/.idea/MxShop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ansible29-python/.idea/ansible29-python.iml" filepath="$PROJECT_DIR$/../ansible29-python/.idea/ansible29-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../autodeploy/.idea/autodeploy.iml" filepath="$PROJECT_DIR$/../autodeploy/.idea/autodeploy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../baojiavue/.idea/baojiavue.iml" filepath="$PROJECT_DIR$/../baojiavue/.idea/baojiavue.iml" />
+      <module fileurl="file://D:/Download/bert-as-service-master/.idea/bert-as-service-master.iml" filepath="D:/Download/bert-as-service-master/.idea/bert-as-service-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../celerysapp/.idea/celerysapp.iml" filepath="$PROJECT_DIR$/../celerysapp/.idea/celerysapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/devs.iml" filepath="$PROJECT_DIR$/.idea/devs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../djvu/.idea/djvu.iml" filepath="$PROJECT_DIR$/../djvu/.idea/djvu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../errbot-master/.idea/errbot-master.iml" filepath="$PROJECT_DIR$/../errbot-master/.idea/errbot-master.iml" />
+      <module fileurl="file://D:/imgs/handtracking-master/.idea/handtracking-master.iml" filepath="D:/imgs/handtracking-master/.idea/handtracking-master.iml" />
+      <module fileurl="file://D:/Install/models/.idea/models.iml" filepath="D:/Install/models/.idea/models.iml" />
+      <module fileurl="file://D:/Download/object-detection-deep-learning/.idea/object-detection-deep-learning.iml" filepath="D:/Download/object-detection-deep-learning/.idea/object-detection-deep-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../py37test/voctrain/palms/.idea/palms.iml" filepath="$PROJECT_DIR$/../py37test/voctrain/palms/.idea/palms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../py37test/.idea/py37test.iml" filepath="$PROJECT_DIR$/../py37test/.idea/py37test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../raspber/.idea/raspber.iml" filepath="$PROJECT_DIR$/../raspber/.idea/raspber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tensorfscripts/.idea/tensorfscripts.iml" filepath="$PROJECT_DIR$/../tensorfscripts/.idea/tensorfscripts.iml" />
+      <module fileurl="file://D:/Download/tensorrt_demos-master/.idea/tensorrt_demos-master.iml" filepath="D:/Download/tensorrt_demos-master/.idea/tensorrt_demos-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/../testprocject/.idea/testprocject.iml" filepath="$PROJECT_DIR$/../testprocject/.idea/testprocject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../vue-frame/.idea/vue-frame.iml" filepath="$PROJECT_DIR$/../vue-frame/.idea/vue-frame.iml" />
-      <module fileurl="file://D:/Git/webui/.idea/webui.iml" filepath="D:/Git/webui/.idea/webui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ubaojia/.idea/ubaojia.iml" filepath="$PROJECT_DIR$/../ubaojia/.idea/ubaojia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../untitled/.idea/untitled.iml" filepath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../vue-fresh/.idea/vue-fresh.iml" filepath="$PROJECT_DIR$/../vue-fresh/.idea/vue-fresh.iml" />
     </modules>
   </component>
 </project>

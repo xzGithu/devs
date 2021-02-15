@@ -8,7 +8,26 @@ from rest_framework.decorators import api_view
 from rest_framework.pagination import LimitOffsetPagination,PageNumberPagination
 from rest_framework import status
 from rest_framework.response import Response
+from models import History_uint,History_text, History_str,History
 
+
+class UintSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = History_uint
+        fields = '__all__'
+class StrSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = History_str
+        fields = '__all__'
+
+class TextSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = History_text
+        fields = '__all__'
+class DataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = History
+        fields = '__all__'
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model=User
@@ -39,12 +58,12 @@ def eventlog_list(request):
         page_list=MyPageNumberPagination()
         pg=page_list.paginate_queryset(queryset=eventlogs,request=request)
         # serializer = UserSerializer1(eventlogs, context={'request': request}, many=True)
-        serializer = UserSerializer1(instance=pg, many=True)
+        serializer = UserSerializer1(instance=pg, many=True, context={'request': request})
         return Response(serializer.data)
         # return Response(serializer.data)
     elif request.method == 'POST':
         print("request",request.data)
-        serializer = UserSerializer1(data=request.data)
+        serializer = UserSerializer1(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

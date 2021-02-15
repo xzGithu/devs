@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="18179" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="18179">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/../autodeploy" web="/" />
+            <mapping local="$PROJECT_DIR$/../djvu" />
+            <mapping local="D:/Download/bert-as-service-master" />
+            <mapping local="D:/Download/tensorrt_demos-master" />
+            <mapping local="$PROJECT_DIR$" />
+            <mapping local="$PROJECT_DIR$/../raspber" />
+            <mapping local="D:/Download/object-detection-deep-learning" />
+            <mapping local="D:/ML-code" />
+            <mapping local="$PROJECT_DIR$/../py37test" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="40">
+          <list size="52">
             <item index="0" class="java.lang.String" itemvalue="flask-migrate" />
             <item index="1" class="java.lang.String" itemvalue="geopy" />
             <item index="2" class="java.lang.String" itemvalue="pyhive" />
@@ -45,6 +45,18 @@
             <item index="37" class="java.lang.String" itemvalue="polyline" />
             <item index="38" class="java.lang.String" itemvalue="unicodecsv" />
             <item index="39" class="java.lang.String" itemvalue="idna" />
+            <item index="40" class="java.lang.String" itemvalue="mysqlclient" />
+            <item index="41" class="java.lang.String" itemvalue="django" />
+            <item index="42" class="java.lang.String" itemvalue="coreapi" />
+            <item index="43" class="java.lang.String" itemvalue="drf-extensions" />
+            <item index="44" class="java.lang.String" itemvalue="raven" />
+            <item index="45" class="java.lang.String" itemvalue="djangorestframework-jwt" />
+            <item index="46" class="java.lang.String" itemvalue="django-filter" />
+            <item index="47" class="java.lang.String" itemvalue="django-redis" />
+            <item index="48" class="java.lang.String" itemvalue="xlsxwriter" />
+            <item index="49" class="java.lang.String" itemvalue="pycryptodome" />
+            <item index="50" class="java.lang.String" itemvalue="djangorestframework" />
+            <item index="51" class="java.lang.String" itemvalue="django-cors-headers" />
           </list>
         </value>
       </option>

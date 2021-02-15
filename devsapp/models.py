@@ -7,11 +7,22 @@ from django.db import models
 # from django.utils.translation import ugettext as _
 # Create your models here.
 
+
 TOOL_RUN_TYPE = (
     (0, 'shell'),
     (1, 'python'),
     (2, 'yml'),
 )
+
+
+class TaskScripts(models.Model):
+    taskname = models.CharField(max_length=100)
+    tasksteps = models.CharField(max_length=1000)
+    describe = models.TextField(blank=True,null=True)
+    def __unicode__(self):
+        return self.taskname.decode()
+
+
 class ToolsScript(models.Model):
     name = models.CharField(max_length=255, verbose_name='工具名称')
     tool_script = models.TextField(verbose_name='脚本')
@@ -79,6 +90,7 @@ class Line(models.Model):
     def __unicode__(self):
         return self.line_code
 
+
 class Device(models.Model):
     node = models.ForeignKey(Node,on_delete=models.PROTECT)
     verdor = (
@@ -101,6 +113,7 @@ class Device(models.Model):
     def __unicode__(self):
         return self.device_caption
 
+
 class SSHInfo(models.Model):
     host_name = models.CharField(max_length=100)
     host = models.CharField(max_length=100)
@@ -112,7 +125,6 @@ class SSHInfo(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.host
-
 
 
 class Assets(models.Model):
@@ -135,7 +147,6 @@ class Assets(models.Model):
     buiness = models.CharField(max_length=100,blank=True)
     def __unicode__(self):
         return self.ip
-
 
 
 class Server_Assets(models.Model):
@@ -251,3 +262,37 @@ class ScriptArgs(models.Model):
     args_name=models.CharField(max_length=100,default='')
     args_value=models.CharField(max_length=100,default='')
     script=models.ForeignKey(Script,default=1,related_name='scriptargs')
+
+
+class History(models.Model):
+    itemid = models.CharField(max_length=64)
+    clock = models.DateTimeField(auto_now=True)
+    uint = models.CharField(max_length=10)
+    value = models.CharField(max_length=10)
+    endpoint = models.CharField(max_length=32)
+    mpoint = models.CharField(max_length=32)
+
+class History_uint(models.Model):
+    itemid = models.CharField(max_length=64)
+    clock = models.DateTimeField(auto_now=True)
+    uint = models.CharField(max_length=10)
+    value = models.CharField(max_length=10)
+    endpoint = models.CharField(max_length=32)
+    mpoint = models.CharField(max_length=32)
+
+class History_str(models.Model):
+    itemid = models.CharField(max_length=64)
+    clock = models.DateTimeField(auto_now=True)
+    uint = models.CharField(max_length=10)
+    value = models.CharField(max_length=10)
+    endpoint = models.CharField(max_length=32)
+    mpoint = models.CharField(max_length=32)
+
+
+class History_text(models.Model):
+    itemid = models.CharField(max_length=64)
+    clock = models.DateTimeField(auto_now=True)
+    uint = models.CharField(max_length=10)
+    value = models.CharField(max_length=10)
+    endpoint = models.CharField(max_length=32)
+    mpoint = models.CharField(max_length=32)
