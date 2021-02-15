@@ -6,6 +6,7 @@ from django.http import JsonResponse,HttpResponse,HttpResponseRedirect
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.contrib.auth import views,authenticate
 from django.contrib.auth.decorators import login_required
+import sqlite3
 from django.shortcuts import render_to_response
 import paramiko
 from rest_framework.serializers import ModelSerializer
@@ -16,10 +17,14 @@ from .forms import *
 from django.contrib.auth.models import User,Group
 import MySQLdb
 from dwebsocket.decorators import accept_websocket,require_websocket
+from dwebsocket.decorators import accept_websocket
+import paramiko
 # from devsapp.ansible_runner.runner import AdHocRunner,PlayBookRunner
 # from devsapp.ansible_runner.callback import CommandResultCallback
 
 #分页函数
+
+
 def pagination(request, queryset, display_amount=10, after_range_num = 5,before_range_num = 4):
     #按参数分页
     try:
@@ -138,6 +143,27 @@ def lists(request,table):
     }
     return render(request,list_template,context)
 
+
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render
+
+def listing(request):
+    contact_list = User.objects.all()
+    print contact_list
+    paginator = Paginator(contact_list, 2) # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        contacts = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        contacts = paginator.page(paginator.num_pages)
+
+    return render(request, 'list.html', {'contacts': contacts})
+
 @login_required
 def add(request,table):
     global form,sub_title
@@ -209,20 +235,15 @@ def assupd(request,table,pk):
     if table == 'asset':
         # ip = Assets.objects.filter(pk=pk)
         table_ins = get_object_or_404(Assets, pk=pk)
-
     if request.method == 'POST':
         # ip = Assets.objects.filter(pk=pk)
         try:
             resource = []
             dict = {}
-
-
             dict['hostname'] = table_ins.ip
             dict["username"] = SSHInfo.objects.filter(host=table_ins.ip)[0].usr
             dict["password"] = SSHInfo.objects.filter(host=table_ins.ip)[0].pwd
-
             resource.append(dict)
-            print resource
             abt = ANSRunner(resource)
             hostlist=[]
             hostlist.append(table_ins.ip)
@@ -244,11 +265,10 @@ def assupd(request,table,pk):
 @login_required
 def index(request):
     #获取相应信息
-    node_number = Node.objects.count()
-    line_number = Line.objects.count()
-    device_number = Device.objects.count()
+    tool_number = ToolsScript.objects.count()
+    task_number = TaskScripts.objects.count()
+    user_number = User.objects.count()
     host_number = Assets.objects.count()
-
     # task_number = Task.objects.count()
     # #获取已结单的数量,用于计算任务完成率
     # task_complete = Task.objects.filter(task_status='已结单').count()
@@ -256,9 +276,9 @@ def index(request):
     # task_complete_percent = round(float(task_complete)/task_number*100,2)
     #将相关参数传递给dashboard页面
     context = {
-        'node_number': node_number,
-        'line_number': line_number,
-        'device_number': device_number,
+        'tool_number': tool_number,
+        'task_number': task_number,
+        'user_number': user_number,
         'host_number': host_number,
         'page_title':"汇总信息",
         'sub_title':"一览",
@@ -459,117 +479,78 @@ def shdel(request,nid):  # 删除
             data = 'error'
         return JsonResponse(data,safe=False)
 
-
+@accept_websocket
 def shell(request, nid):  ##执行脚本页面
     # print nid
-    if request.method == "GET":
+    if not request.is_websocket():
         obj = Assets.objects.filter(id__gt=0)
         print obj
         sh = ToolsScript.objects.filter(id=nid)
-
         return render(request, 'scripts/shell.html', {"host_list": obj, "sh": sh})
+    else:
+        ret = {'status': True, 'data': None}
+        print ret
+        for message in request.websocket:
+            message = eval(message.decode('utf-8'))
+            host = message["host"]
+            scname = message["scname"]
+            print(host)
+            mysc = ToolsScript.objects.get(name=scname).tool_script
+            print mysc
+            ssh = paramiko.SSHClient()
+
+            # 允许不再known_hosts列表的设置
+            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                ssh.connect(hostname=host, username='root', password='SUSE_11.1')
+            except Exception as e:
+                print e.message
+                request.websocket.send(e.message)
+                request.close()
+                break
+            # # 务必要加上get_pty=True,否则执行命令会没有权限
+            stdin, stdout, stderr = ssh.exec_command(mysc, get_pty=True)
+            # result = stdout.read()
+            # 循环发送消息给前端页面
+            while True:
+                nextline = stdout.readline()
+                # nextlines = stdout.readlines()  # 读取脚本输出内容
+                # for nextline in nextlines:
+                request.websocket.send(nextline.encode('utf-8'))  # 发送消息到客户端
+                # else:
+                #     break
+                # 判断消息为空时,退出循环
+                if not nextline:
+                    break
+
+            ssh.close()  # 关闭ssh连接
+            # request.websocket.send(host+'-'+scname.encode('utf-8'))
+@accept_websocket
 def shell_sh(request):  ##执行脚本-执行
-    ret = {'status': True, 'data': None}
-    if request.method == 'POST':
+    if not request.is_websocket():
         try:
-            host_ids = request.POST.getlist('id', None)
-            sh_id = request.POST.get('shid', None)
-            # print host_ids
-            user = request.user
-            if not host_ids:
-                error1 = "请选择主机"
-                ret = {"error": error1, "status": False}
-                return HttpResponse(json.dumps(ret))
+            message = request.GET('message')
+            return HttpResponse(message)
+        except:
+            return render(request,'apps/cmdlines.html')
 
-            idstring = ','.join(host_ids)
-            # print idstring
 
-            host = SSHInfo.objects.extra(where=['id IN (' + idstring + ')'])
-            host1 = SSHInfo.objects.filter(id=host_ids)
-            sh = ToolsScript.objects.filter(id=sh_id)
-            print sh
-            print host
-
-            for s in sh:
-                if s.tool_run_type == 0:
-                    with  open('scripts/shell/test.sh', 'w+') as f:
-                        f.write(s.tool_script)
-                        a = 'scripts/shell/{}.sh'.format(s.id)
-                    os.system("sed 's/\r//'  scripts/shell/test.sh >  {}".format(a))
-
-                elif s.tool_run_type == 1:
-                    with  open('scripts/shell/test.py', 'w+') as f:
-                        f.write(s.tool_script)
-                        p = 'scripts/shell/{}.py'.format(s.id)
-                    os.system("sed 's/\r//'  scripts/shell/test.py >  {}".format(p))
-                elif s.tool_run_type == 2:
-                    with  open('scripts/shell/test.yml', 'w+') as f:
-                        f.write(s.tool_script)
-                        y = 'scripts/shell/{}.yml'.format(s.id)
-                    os.system("sed 's/\r//'  scripts/shell/test.yml >  {}".format(y))
-                else:
-                    ret['status'] = False
-                    ret['error'] = '脚本类型错误,只能是shell、yml、python'
-                    return HttpResponse(json.dumps(ret))
-
-                data1 = []
-                for h in host:
-                    try:
-                        data2 = {}
-                        assets = [
-                            {
-                                "hostname": h.hostname,
-                                "ip": h.ip,
-                                "port": h.port,
-                                "username": h.username,
-                                "password": h.password,
-                            },
-                        ]
-
-                        # history = History.objects.create(ip=h.ip, root=h.username, port=h.port, cmd=s.name, user=user)
-                        if s.tool_run_type == 0:
-                            task_tuple = (('script', a),)
-                            hoc = AdHocRunner(hosts=assets)
-                            hoc.results_callback = CommandResultCallback()
-                            r = hoc.run(task_tuple)
-                            data2['ip'] = h.ip
-                            data2['data'] = r['contacted'][h.hostname]['stdout']
-                            data1.append(data2)
-                        elif s.tool_run_type == 1:
-                            task_tuple = (('script', p),)
-                            hoc = AdHocRunner(hosts=assets)
-                            hoc.results_callback = CommandResultCallback()
-                            r = hoc.run(task_tuple)
-                            data2['ip'] = h.ip
-                            data2['data'] = r['contacted'][h.hostname]['stdout']
-                            data1.append(data2)
-                        elif s.tool_run_type == 2:
-                            play = PlayBookRunner(assets, playbook_path=y)
-                            b = play.run()
-                            print(b)
-                            data2['ip'] = h.ip
-                            data2['data'] = b['plays'][0]['tasks'][1]['hosts'][h.hostname]['stdout'] + \
-                                            b['plays'][0]['tasks'][1]['hosts'][h.hostname]['stderr']
-                            print(data2['data'])
-
-                            print(data2)
-                            data1.append(data2)
-                        else:
-                            data2['ip'] = "脚本类型错误"
-                            data2['data'] = "脚本类型错误"
-                    except  Exception as  e:
-                        data2['ip'] = h.ip
-                        data2['data'] = "账号密码不对，请修改 {}".format(e)
-                        data1.append(data2)
-
-                ret['data'] = data1
-                print(ret)
-                return HttpResponse(json.dumps(ret))
-        except Exception as e:
-            ret['status'] = False
-            ret['error'] = '未知错误 {}'.format(e)
-            return HttpResponse(json.dumps(ret))
-
+    else:
+        ret = {'status': True, 'data': None}
+        print ret
+        for message in request.websocket():
+            message = eval(message.decode('utf-8'))
+            host = message["host"]
+            scname = message["scname"]
+            # ssh = paramiko.SSHClient()
+            # ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            # try:
+            #     ssh.connect(hostname=host, username='root', password='1qaz@WSX')
+            # except Exception as e:
+            #     print e
+            # ssh.close()
+            print host,scname
+            request.websocket.send(host+'-'+scname.encode('utf-8'))
 
 def scinfo(request, nid):  # 查看
     if request.method == "GET":
@@ -734,9 +715,10 @@ def host_web_ssh(request):   ##  web ssh 登陆
 #     if request.method == "POST":
 @login_required
 def gethostper(request):
-    connect=MySQLdb.connect(host="192.168.182.179",user="root",passwd="",db="zabbix",port=3306)
+    connect = sqlite3.connect("D:/py-source/devs/db.sqlite3")
+    # connect=MySQLdb.connect(host="192.168.182.179",user="root",passwd="",db="zabbix",port=3306)
     cursor=connect.cursor()
-    cursor.execute("select clock,value from history_uint where itemid=28564 limit 100")
+    cursor.execute("select clock,value from history_uint where itemid='disk_usage' and endpoint='120.0.0.1' limit 100")
     datas=cursor.fetchall()
     times=[]
     values=[]
@@ -777,6 +759,56 @@ def echo1(request,userid):
             for i in allconn:
                 if i != str(userid):
                     allconn[i].send(message)
-def anot(request):
-    global a
-    pass
+
+
+from devsapp.models import History,History_str,History_text,History_uint
+def get_data(request):
+    if request.method == 'POST':
+        # print(type(request.body))
+        recvdata = request.body
+        import time
+        import sqlite3
+        cx = sqlite3.connect("D:/py-source/devs/db.sqlite3")
+        cu = cx.cursor()
+        sql = 'insert into devsapp_history_uint(endpoint, mpoint, itemid, uint,value,clock) values(?,?,?,?,?,?)'
+        # print(json.loads(recvdata)["data"])
+        datas=[]
+        for data in json.loads(recvdata)["data"]:
+            print(data)
+            # data = json.loads(data)
+            try:
+                endpoint = data["endpoint"]
+                mpoint = data["mpoint"]
+                itemid = data["itemid"]
+                uint = data["uint"]
+                value = data["value"]
+                clock = data["clock"]
+                dtype = data["dtype"]
+
+                if dtype=='int':
+                    stime = int(time.time()*1000)
+                    for i in range(200):
+                        datas.append((endpoint, mpoint, itemid, uint,value,clock))
+                        # History_uint.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    cu.executemany(sql, datas)
+                    cx.commit()
+                    cu.close()
+                    cx.close()
+                    etime = int(time.time()*1000)
+                    dtime = etime-stime
+                    print('total data 1000,last %s ms' %dtime)
+                    #data_int.append((endpoint,mpoint,itemid,uint,value,clock))
+                elif dtype=='str':
+                    History_str.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    #data_str.append((endpoint,mpoint,itemid,uint,value,clock))
+                elif dtype=='text':
+                    History_text.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    #data_text.append((endpoint,mpoint,itemid,uint,value,clock))
+                else:
+                    History.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    #data_c.append((endpoint,mpoint,itemid,uint,value,clock))
+                return JsonResponse({"status_code":200})
+            except:
+                return JsonResponse({"status_code":400})
+    else:
+        return JsonResponse({"status_code":402})

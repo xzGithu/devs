@@ -1,0 +1,265 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block page_css %}
+    <style>
+      .left {
+        float: left;
+        width: 300px;
+        height: 300px;
+{#        background-color: red;#}
+      }
+      .right {
+{#        background-color: orange;#}
+        margin-left: 310px;
+        height: 300px;
+      }
+    </style>
+{% endblock %}
+{% block ptitle %}
+布局您的任务
+{% endblock %}
+{% block container %}
+
+<body onload="init()">
+<div id="sample">
+  <div style="width: 100%; display: flex; justify-content: space-between">
+    <div id="myPaletteDiv" style="width: 250px; margin-right: 2px; background-color: whitesmoke; border: solid 1px black"></div>
+    <div id="myDiagramDiv" style="flex-grow: 1; height: 350px; border: solid 1px black"></div>
+  </div>
+  <button id="SaveButton" onclick="save()">Save</button>
+  <button onclick="load()">Load</button>
+  Diagram Model saved in JSON format:
+  <textarea id="mySavedModel" style="width:100%;height:300px">
+
+  </textarea>
+  <button onclick="printDiagram()">Print Diagram Using SVG</button>
+</div>
+</body>
+{% endblock %}
+{% block page_javascript %}
+<script src="/static/assets/js/go.js"></script>
+
+<script id="code">
+  function init() {
+    if (window.goSamples) goSamples();  // init用于这些示例——您不需要调用它
+    var $ = go.GraphObject.make;  //用于定义模板的简洁性
+    myDiagram =
+      $(go.Diagram, "myDiagramDiv",  //必须命名或引用DIV HTML元素
+        {
+          initialContentAlignment: go.Spot.Center,
+          allowDrop: true,  //必须为true，才能接受调色板中的液滴
+          "LinkDrawn": showLinkLabel,  //这个DiagramEvent监听器定义如下
+          "LinkRelinked": showLinkLabel,
+          scrollsPageOnFocus: false,
+          "grid.visible" : true,//显示网格
+          "grid.gridCellSize": new go.Size(10, 10),
+          "undoManager.isEnabled": true,  //启用撤销和重做
+          "commandHandler.archetypeGroupData": { isGroup: true, category: "OfNodes" },
+        });
+   //修改文档时，在标题中添加“*”，并启用“Save”按钮
+    myDiagram.addDiagramListener("Modified", function(e) {
+      var button = document.getElementById("SaveButton");
+      if (button) button.disabled = !myDiagram.isModified;
+      var idx = document.title.indexOf("*");
+      if (myDiagram.isModified) {
+        if (idx < 0) document.title += "*";
+      } else {
+        if (idx >= 0) document.title = document.title.substr(0, idx);
+      }
+    });
+    //组有两个模板，“组”和“节点”。
+    //节点模板的帮助定义
+    function nodeStyle() {
+      return [
+        //节点。位置来自节点数据的“loc”属性，
+        //由点转换。解析静态方法。
+        //如果节点。位置改变，更新节点数据的“loc”属性，
+        //用点转换回来。stringify静态方法。
+        new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+
+        {
+          //节点。位置位于每个节点的中心
+{#          selectionAdorned : false,//显示选中边框#}
+          locationSpot: go.Spot.Center,
+{#          mouseDrop:function(e, nod) { finishDrop(e, nod.containingGroup); }#}
+        }
+      ];
+    }
+  //定义一个函数来创建一个通常透明的“端口”。
+  //“名字”是用来做笔画的。
+  //“align”用于确定端口相对于节点体的位置，
+  //“点”用于控制链路如何与端口连接，以及是否与端口连接
+  //沿着节点的一侧延伸，
+  //布尔值“输出”和“输入”参数控制用户是否可以从端口绘制链接。
+    function makePort(name, align, spot, output, input) {
+      var horizontal = align.equals(go.Spot.Top) || align.equals(go.Spot.Bottom);
+      //端口基本上就是一个沿着节点一侧延伸的透明矩形，
+      //当鼠标经过它时，它会变成彩色
+      return $(go.Shape,
+        {
+          fill: "transparent",  //更改为mouseEnter事件处理程序中的颜色
+          strokeWidth: 0,  // no stroke
+          width: horizontal ? NaN : 8,  //如果不是水平拉伸，就只有8英寸宽
+          height: !horizontal ? NaN : 8,  //如果不是垂直伸展，只有8英尺高
+          alignment: align,  //对齐主形状上的端口
+          stretch: (horizontal ? go.GraphObject.Horizontal : go.GraphObject.Vertical),
+          portId: name,   //声明该对象为“端口”
+          fromSpot: spot,   //声明链接可能在此端口连接的位置
+          fromLinkable: output,  //声明用户是否可以从这里绘制链接
+          toSpot: spot,  //声明链接可以在此端口连接的位置
+          toLinkable: input,  //声明用户是否可以在这里绘制链接
+          cursor: "pointer",  //显示一个不同的光标来指示潜在的链接点
+          mouseEnter: function(e, port) {  //端口参数将是这个形状
+            if (!e.diagram.isReadOnly) port.fill = "rgba(192,192,192,0.5)";
+          },
+          mouseLeave: function(e, port) {
+            port.fill = "transparent";
+          }
+        });
+    }
+    function textStyle() {
+      return {
+        font: "9pt Helvetica, Arial, sans-serif",
+        stroke: "#000000"
+      }
+    }
+    function finishDrop(e, grp) {
+        var ok = (grp !== null
+                  ? grp.addMembers(grp.diagram.selection, true)
+                  : e.diagram.commandHandler.addTopLevelParts(e.diagram.selection, true));
+        if (!ok) e.diagram.currentTool.doCancel();
+      }
+
+     myDiagram.nodeTemplateMap.add("",  // the default category
+            $(go.Node, "Table", nodeStyle(),
+              // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
+              $(go.Panel, "Auto",
+                $(go.Shape, "Rectangle",
+                  { fill: "#00A9C9", strokeWidth: 0 },
+                  new go.Binding("figure", "figure")),
+                $(go.TextBlock, textStyle(),
+                  {
+                    margin: 8,
+                    maxSize: new go.Size(160, NaN),
+                    wrap: go.TextBlock.WrapFit,
+                    editable: true
+                  },
+                  new go.Binding("text").makeTwoWay())
+              ),
+              // four named ports, one on each side:
+              makePort("T", go.Spot.Top, go.Spot.TopSide, false, true),
+              makePort("L", go.Spot.Left, go.Spot.LeftSide, true, true),
+              makePort("R", go.Spot.Right, go.Spot.RightSide, true, true),
+              makePort("B", go.Spot.Bottom, go.Spot.BottomSide, true, false)
+            ));
+
+
+      //自定义linkTemplateMap中的默认链接模板
+    myDiagram.linkTemplate =
+      $(go.Link,
+        {
+          routing: go.Link.AvoidsNodes,
+          curve: go.Link.JumpOver,
+          corner: 5, toShortLength: 4,
+          relinkableFrom: true,
+          relinkableTo: true,
+          reshapable: true,
+          resegmentable: true,
+          //鼠标悬停会巧妙地突出显示链接:
+          mouseEnter: function(e, link) { link.findObject("HIGHLIGHT").stroke = "rgba(30,144,255,0.2)"; },
+          mouseLeave: function(e, link) { link.findObject("HIGHLIGHT").stroke = "transparent"; },
+          selectionAdorned: false
+        },
+        new go.Binding("points").makeTwoWay(),
+        $(go.Shape, //突出的形状，通常是透明的
+          { isPanelMain: true, strokeWidth: 8, stroke: "transparent", name: "HIGHLIGHT" }),
+        $(go.Shape,
+          { isPanelMain: true, stroke: "gray", strokeWidth: 2 },
+          new go.Binding("stroke", "isSelected", function(sel) { return sel ? "dodgerblue" : "gray"; }).ofObject()),
+        $(go.Shape,  //箭头
+          { toArrow: "standard", strokeWidth: 0, fill: "gray"}),
+        $(go.Panel, "Auto",  //链接标签，通常不可见
+          { visible: false, name: "LABEL", segmentIndex: 2, segmentFraction: 0.5},
+          new go.Binding("visible", "visible").makeTwoWay(),
+          $(go.Shape, "RoundedRectangle",  //标签的形状
+            { fill: "#F8F8F8", strokeWidth: 0 }),
+          $(go.TextBlock, "Yes",  //文字
+            {
+              textAlign: "center",
+              font: "10pt helvetica, arial, sans-serif",
+              stroke: "#333333",
+              editable: true
+            },
+            new go.Binding("text").makeTwoWay())
+        )
+      );
+    //如果来自“条件”节点，则使链接标签可见。
+    //这个监听器由“linkdraw”和“linkrelink”图形事件调用。
+    function showLinkLabel(e) {
+      var label = e.subject.findObject("LABEL");
+      if (label !== null) label.visible = (e.subject.fromNode.data.category === "Conditional");
+    }
+    //LinkingTool和RelinkingTool使用的临时链接也是正交的:
+    myDiagram.toolManager.linkingTool.temporaryLink.routing = go.Link.Orthogonal;
+    myDiagram.toolManager.relinkingTool.temporaryLink.routing = go.Link.Orthogonal;
+   // load();  //从JSON文本加载初始图
+
+    //初始化页面左侧的调色板
+    myPalette =
+      $(go.Palette, "myPaletteDiv", //必须命名或引用DIV HTML元素
+        {
+          scrollsPageOnFocus: false,
+          nodeTemplateMap: myDiagram.nodeTemplateMap,  //分享myDiagram使用的模板
+          model: new go.GraphLinksModel([  //指定调色板的内容
+              {% for item in taskscripts %}
+            { category: "Start", text: "{{ item.name }}" },
+              {% endfor %}
+          ])
+        });
+  } //初始化结束
+  //以JSON格式显示图的模型，用户可以对其进行编辑
+  function save() {
+    document.getElementById("mySavedModel").value = myDiagram.model.toJson();
+    var taskname = prompt("输入名称: ", "task1");
+    jsonString=myDiagram.model.toJson();
+    console.log(jsonString);
+    myDiagram.isModified = false;
+    $.ajaxSetup({
+        data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+    });
+    $.ajax({
+      type:'POST',
+      url:'/savetask/',
+      data:{'data':jsonString,"name":taskname},
+      dataType:'JSON',
+      scriptCharset: 'gbk',
+      success: function (data) {
+          alert(data["message"]);
+            }
+        });
+  }
+   function load() {
+    myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
+  }
+
+  //打开一个新窗口，其中包含每个页面的SVG图内容图像，从而打印图
+  function printDiagram() {
+    var svgWindow = window.open();
+    if (!svgWindow) return;  //打开新窗口失败
+    var printSize = new go.Size(700, 960);
+    var bnds = myDiagram.documentBounds;
+    var x = bnds.x;
+    var y = bnds.y;
+    while (y < bnds.bottom) {
+      while (x < bnds.right) {
+        var svg = myDiagram.makeSVG({ scale: 1.0, position: new go.Point(x, y), size: printSize });
+        svgWindow.document.body.appendChild(svg);
+        x += printSize.width;
+      }
+      x = bnds.x;
+      y += printSize.height;
+    }
+    setTimeout(function() { svgWindow.print(); }, 1);
+  }
+</script>
+{% endblock %}

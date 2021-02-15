@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+{% block container %}
+    {% load staticfiles %}
+    {% block page_javascript %}
+        <script src="/static/assets/js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript">
+        $('#clear').click(function () {
+            $('#messagecontainer').empty()
+        });
+
+         $('#cmdline').click(function () {
+                var socket = new WebSocket("ws://" + window.location.host + "/output/");
+                console.log(socket);
+                var arr={};
+                arr.hostname=$('#hostname').val();
+                arr.username=$('#username').val();
+                arr.mingling=$('#mingling').val();
+                socket.onopen = function () {
+                    socket.send(JSON.stringify(arr));//发送密码到服务端
+                };
+                socket.onmessage = function (e) {
+                    console.log('message: ' + e.data);//打印服务端返回的数据
+                    $('#messagecontainer').append(e.data+'<br/>');
+                };
+            });
+        </script>
+    {% endblock %}
+
+{#<br>#}
+    <input type="text" id="hostname" value="127.0.0.1"/>
+    <input type="text" id="username" value="root"/>
+    <input type="text" id="mingling" value="df -h" />
+    <button style="margin: 20px;height: 40px;background-color: #00ff00;" type="button" id="cmdline" value="cmdline">
+        执行Shell脚本
+    </button>
+        <button style="margin: 20px;height: 40px;background-color: #00ff00;" type="button" id="clear" value="clear">
+        清除
+    </button>
+    <h3 style="margin: 20px;">脚本执行结果:</h3>
+    <div id="messagecontainer" style="margin: 20px;">
+    {{ errcode }}
+    </div>
+    <hr/>
+
+
+{% endblock %}

@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title> 运维管理平台 </title>
-
+        <link rel="icon" type="image/x-icon" href="/static/assets/images/bitbug_favicon.ico"/>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -133,8 +133,44 @@
 								<span class="menu-text"> 控制台 </span>
 							</a>
 						</li>
+<!-- renwubianpai-->
+                      {% if '/taskmake/' in request.path or 'listtask' in request.path or 'updatetask' in request.path %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                        <a href="#" class="dropdown-toggle">
+                            <i class="icon-th-large"></i>
+                            <span class="menu-text"> 任务中心 </span>
+                            <b class="arrow icon-angle-down"></b>
+                        </a>
+
+						<ul class="submenu">
+				            {% if 'taskmake' in request.path %}
+                            <li class="active" >
+                            {% else %}
+                            <li class="">
+                            {% endif %}
+                            <a href="{% url "taskmake" %}">
+                                <i class="icon-double-angle-right"></i>
+										编辑任务
+                            </a>
+                            </li>
+                            {% if 'listtask' in request.path or 'updatetask' in request.path %}
+                            <li class="active" >
+                            {% else %}
+                            <li class="">
+                            {% endif %}
+                            <a href="{% url "listtask" %}">
+                                <i class="icon-double-angle-right"></i>
+										任务列表
+                            </a>
+                            </li>
+                        </ul>
+						</li>
+
 <!-- SSH> -->
-                      {% if   '/shedit/' in request.path or '/scadd/' in request.path or '/run_ssh_cmd/' in request.path or '/run_ans_cmd/' in request.path or 'listsc' in request.path%}
+                      {% if   'shedit' in request.path or '/scadd/' in request.path or '/run_ssh_cmd/' in request.path or '/run_ans_cmd/' in request.path or 'listsc' in request.path%}
                         <li class="active open" >
                       {% else %}
                         <li class="">
@@ -146,7 +182,7 @@
                         </a>
 
 							<ul class="submenu">
-                            {% if '/listsc/' in request.path %}
+                            {% if '/listsc/' in request.path or 'shedit' in request.path %}
                             <li class="active" >
                             {% else %}
                             <li class="">
@@ -253,6 +289,78 @@
                            </li>
                          </ul>
                         </li>
+<!-- ansible guanli -->
+                       {% if '/ansible' in request.path   %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                      <a href="#" class="dropdown-toggle">
+                        <i class="icon-user"></i>
+                        <span class="menu-text"> ansible自动任务 </span>
+                        <b class="arrow icon-angle-down"></b>
+                      </a>
+                        <ul class="submenu">
+                        {% if '/user/' in request.path   %}
+                          <li class="active open" >
+                        {% else %}
+                          <li class="">
+                        {% endif %}
+                            <a href="{% url 'lists' table='user' %}">
+                                <i class="icon-double-angle-right"></i>
+                                用户列表
+                            </a>
+                           </li>
+                         </ul>
+                        </li>
+<!-- CICD -->
+                  {% if '/CICD' in request.path   %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                      <a href="#" class="dropdown-toggle">
+                        <i class="icon-user"></i>
+                        <span class="menu-text"> 敏捷开发 </span>
+                        <b class="arrow icon-angle-down"></b>
+                      </a>
+                        <ul class="submenu">
+                        {% if '/user/' in request.path   %}
+                          <li class="active open" >
+                        {% else %}
+                          <li class="">
+                        {% endif %}
+                            <a href="{% url 'lists' table='user' %}">
+                                <i class="icon-double-angle-right"></i>
+                                用户列表
+                            </a>
+                           </li>
+                         </ul>
+                        </li>
+<!--websocket ceshi> -->
+                      {% if '/output' in request.path   %}
+                        <li class="active open" >
+                      {% else %}
+                        <li class="">
+                      {% endif %}
+                      <a href="#" class="dropdown-toggle">
+                        <i class="icon-plus"></i>
+                        <span class="menu-text"> websocket功能 </span>
+                        <b class="arrow icon-angle-down"></b>
+                      </a>
+                        <ul class="submenu">
+                        {% if '/output/' in request.path   %}
+                          <li class="active open" >
+                        {% else %}
+                          <li class="">
+                        {% endif %}
+                            <a href="{% url 'cmdlines'  %}">
+                                <i class="icon-double-angle-right"></i>
+                                WebSocket功能
+                            </a>
+                           </li>
+                         </ul>
+                        </li>
 <!--xineng guanli> -->
                       {% if '/gethostper' in request.path   %}
                         <li class="active open" >
@@ -323,6 +431,8 @@
                             <div class="page-header">
                                     <h1>
                                         <!--设置导航栏的页面标题-->
+                                        {% block ptitle %}
+                                        {% endblock %}
                                         {{ page_title }}
                                         <small>
                                             <i class="ace-icon fa fa-angle-double-right"></i>

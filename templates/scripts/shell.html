@@ -13,12 +13,6 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="fa fa-wrench"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">配置选项 1</a>
-                                </li>
-                                <li><a href="#">配置选项 2</a>
-                                </li>
-                            </ul>
                             <a class="close-link">
                                 <i class="fa fa-times"></i>
                             </a>
@@ -28,12 +22,12 @@
                     <div class="ibox-content">
 
                       <div class="table-responsive">
-                        <form class="form-horizontal" id="shell_from">{% csrf_token %}
+                     <!--   <form class="form-horizontal" id="shell_from">   -->
                             <table class="table table-striped table-bordered table-hover dataTables-example"
                                    style="word-break:break-all; word-wrap:break-word;">
                                 <thead>
                                 <tr>
-                                    <th width="20"><input type="checkbox" id="CheckedAll"></th>
+                                    <th width="20"><input type="radio" id="CheckedAll"></th>
                                     <th>主机名</th>
                                     <th>IP</th>
                                     <th>机房</th>
@@ -42,7 +36,7 @@
                                 <tbody>
                                 {% for row in host_list %}
                                     <tr class="gradeX">
-                                        <td><input  type="checkbox" value="{{ row.id }}"   name="r"></td>
+                                        <td><input  type="radio" value="{{ row.id }}"   name="r"></td>
                                         <td>{{ row.hostname }}</td>
                                         <td>{{ row.ip }}</td>
                                         <td noWrap>{{ row.jifang }}</td>
@@ -54,9 +48,9 @@
                            {%  for row in sh %}
                            <div class="form-group">
                                 <label class="col-sm-2 control-label">工具名称</label>
-                                <input type="text"   name="shid" style="display:none" value="{{ row.id }}"/>
+                                <input type="text" id="shid"  name="shid" style="display:none" value="{{ row.id }}"/>
                                 <div class="col-lg-4 col-sm-6">
-                                    <input type="text" class="form-control" name="name"  required=""  value="{{ row.name }}">
+                                    <input type="text" id="shname" class="form-control" name="name"  required=""  value="{{ row.name }}">
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -68,7 +62,7 @@
                                 </div>
                             </div>
                         </div>
-                      </form>
+                      <!-- </form> -->
                      </div>
                     </div>
                 </div>
@@ -86,20 +80,14 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="fa fa-wrench"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">配置选项 1</a>
-                                </li>
-                                <li><a href="#">配置选项 2</a>
-                                </li>
-                            </ul>
                             <a class="close-link">
                                 <i class="fa fa-times"></i>
                             </a>
                         </div>
                     </div>
                    <div class="ibox-content" id="pre" >
-                        <pre> <span id="err"></span></pre>
-                        {#                   {{ ret |linebreaksbr  }}    {{ err |linebreaksbr  }}#}
+                        <pre> <span id="messagecontainer"></span></pre>
+                                           {{ ret |linebreaksbr  }}    {{ err |linebreaksbr  }}
                     </div>
                 </div>
             </div>
@@ -107,68 +95,33 @@
     </div>
 {% endblock %}
 {% block  page_javascript %}
-{#<script>#}
-{# $(document).ready(function(){#}
-{#     var editor_two = CodeMirror.fromTextArea(document.getElementById("code2"), {#}
-{#         lineNumbers: true,#}
-{#         matchBrackets: true,#}
-{#         styleActiveLine: true#}
-{#     });#}
-{#             });#}
-{#         $('#shell').click(function () {#}
-{#             $.ajax({#}
-{#                 url: "/shell.html",#}
-{#                 type: 'POST',#}
-{#                 data: $('#shell_from').serialize(),#}
-{#                 success: function (data) {#}
-{#                     var obj = JSON.parse(data);#}
-{#                     if (obj.status) {#}
-{#                            con = "";#}
-{#                            $.each(obj, function (data, values) {#}
-{#                                $.each(values, function (index, value) {#}
-{#                                    con += " <pre>主机: " + value.ip + "\n" + "结果: " + value.data + "</pre>";#}
-{#                                })#}
-{#                            });#}
-{#                            $("#pre").html(con);#}
-{#                        } else {#}
-{#                            $('#err').text(obj.error);#}
-{#                            }#}
-{##}
-{#                 }#}
-{##}
-{#             });#}
-{##}
-{#         });#}
-{#</script>#}
 <script language="javascript">
  function getTDtext()
  {
- var a = document.getElementsByName("r");//获取所以复选框
-for(var i=0;i<a.length;i++){
-    if(a[i].checked){
-        var tddata=a[i].parentNode.parentNode.children[2].innerHTML;
-         $.ajax({
-             url: "/users/",
-             type: 'POST',
-             data: tddata,
-             success: function (data) {
-                 var obj = JSON.parse(data);
-                 if (obj.status) {
-                        con = "";
-                        $.each(obj, function (data, values) {
-                            $.each(values, function (index, value) {
-                                con += " <pre>主机: " + value.ip + "\n" + "结果: " + value.data + "</pre>";
-                            })
-                        });
-                        $("#pre").html(con);
-                    } else {
-                        $('#err').text(obj.error);
-                        }
-             }
+     $('#messagecontainer').empty()
+    var a = document.getElementsByName("r");//获取所以复选框
+    var socket = new WebSocket("ws://" + window.location.host + "/shell-"+$('#shid').val()+'/');
+    for(var i=0;i<a.length;i++){
+        if(a[i].checked){
+            var tddata=a[i].parentNode.parentNode.children[2].innerHTML;
+{#            var socket = new WebSocket("ws://" + window.location.host + "/shell-"+$('#shid').val()+'/');#}
 
-         });
+            var arr={};
+            arr.host=tddata;
+            arr.scname=$('#shname').val();
+            console.log(arr)
+            socket.onopen = function () {
+                console.log(socket);
+                socket.send(JSON.stringify(arr));//发送密码到服务端
+            };
+            socket.onmessage = function (e) {
+                console.log('message: ' + e.data);//打印服务端返回的数据
+                $('#messagecontainer').append(e.data+'<br/>');
+            };
+        }
+
     }
-  }
+{#    socket.close()#}
  }
  </script>
 {% endblock %}

@@ -1,0 +1,23 @@
+
+rpython:S3776ª"TRefactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.(Ÿº£‹úÿÿÿÿ
+7python:S125ï"Remove this commented out code.(ÿüÏ¾
+7python:S125Ÿ"Remove this commented out code.(­±£Ÿ
+7python:S125Ü"Remove this commented out code.(¬ïõ™
+@python:S1481¿"'Remove the unused local variable "obj".(±ù¼
+6python:S125T"Remove this commented out code.(ìÈÊ€
+6python:S125a"Remove this commented out code.(ÂôÔÇ
+<python:S125è"Remove this commented out code.(Ö…—êüÿÿÿÿ
+5python:S2772ù"Remove this unneeded "pass".(ã‘Û¾
+Fpython:S1481’"(Remove the unused local variable "info".(•‘¸²ÿÿÿÿÿ
+<python:S125‡"Remove this commented out code.(¼«ÍÉúÿÿÿÿ
+<python:S125Æ"Remove this commented out code.(Ú½Ì–ùÿÿÿÿ
+7python:S125ë"Remove this commented out code.(ÿüÏ¾
+gpython:S1313Ì"IMake sure using this hardcoded IP address "192.168.182.179" is safe here.(õ‡³ıÿÿÿÿ
+6python:S125"Remove this commented out code.(…ÎÍ‚
+6python:S125"Remove this commented out code.(«¦™á
+mpython:S3776§"TRefactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.(À“‘î
+<python:S125„"Remove this commented out code.(öÜùÇúÿÿÿÿ
+rpython:S3776ƒ"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(äÑ€Œüÿÿÿÿ
+Fpython:S1481à"(Remove the unused local variable "obj1".(åõä…şÿÿÿÿ
+lpython:S3776O"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(´ÜÏó
+7python:S125™"Remove this commented out code.(ü…ÆÆ

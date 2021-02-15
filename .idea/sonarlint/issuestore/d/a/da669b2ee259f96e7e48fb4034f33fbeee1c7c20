@@ -1,0 +1,7 @@
+
+6python:S125"Remove this commented out code.(ú¹êì
+6python:S125÷"Remove this commented out code.(ˆÙÇ
+jpython:S101–"RRename class "Server_Assets" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(éîâÏ
+kpython:S101¹"SRename class "service_assets" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(øˆÈ€
+rpython:S101Æ"URename class "Ansible_Playbook" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ˆÓ™Ôþÿÿÿÿ
+ypython:S101Ú"\Rename class "Ansible_Playbook_Number" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(è›Öøúÿÿÿÿ
