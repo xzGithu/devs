@@ -29,7 +29,7 @@ cx-Oracle==6.0.3
 cycler==0.10.0
 decorator==4.2.1
 demjson==2.2.4
-Django==1.10.6
+Django==1.11.29
 django-bootstrap-breadcrumbs==0.8.2
 django-bootstrap-toolkit==2.15.0
 django-bootstrap3==9.0.0
