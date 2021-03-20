@@ -79,7 +79,7 @@ itsdangerous==0.24
 itypes==1.1.0
 jdcal==1.4.1
 jieba==0.39
-Jinja2==2.9.6
+Jinja2==2.11.3
 jmespath==0.9.3
 JPype1==0.6.3
 jsonfield==2.0.2
