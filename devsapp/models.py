@@ -280,6 +280,15 @@ class History_uint(models.Model):
     endpoint = models.CharField(max_length=32)
     mpoint = models.CharField(max_length=32)
 
+    def __str__(self):
+        return self.endpoint
+
+class History_metric(models.Model):
+    itemid = models.CharField(max_length=64)
+    endpoint = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.itemid
 class History_str(models.Model):
     itemid = models.CharField(max_length=64)
     clock = models.DateTimeField(auto_now=True)

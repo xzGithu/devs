@@ -773,8 +773,9 @@ def get_data(request):
         sql = 'insert into devsapp_history_uint(endpoint, mpoint, itemid, uint,value,clock) values(?,?,?,?,?,?)'
         # print(json.loads(recvdata)["data"])
         datas=[]
+        stime = int(time.time() * 1000)
         for data in json.loads(recvdata)["data"]:
-            print(data)
+            # print(data)
             # data = json.loads(data)
             try:
                 endpoint = data["endpoint"]
@@ -783,20 +784,13 @@ def get_data(request):
                 uint = data["uint"]
                 value = data["value"]
                 clock = data["clock"]
-                dtype = data["dtype"]
+                dtype = data["dtypes"]
 
                 if dtype=='int':
-                    stime = int(time.time()*1000)
-                    for i in range(200):
-                        datas.append((endpoint, mpoint, itemid, uint,value,clock))
+
+                    # for i in range(200):
+                    datas.append((endpoint, mpoint, itemid, uint,value,clock))
                         # History_uint.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
-                    cu.executemany(sql, datas)
-                    cx.commit()
-                    cu.close()
-                    cx.close()
-                    etime = int(time.time()*1000)
-                    dtime = etime-stime
-                    print('total data 1000,last %s ms' %dtime)
                     #data_int.append((endpoint,mpoint,itemid,uint,value,clock))
                 elif dtype=='str':
                     History_str.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
@@ -807,8 +801,19 @@ def get_data(request):
                 else:
                     History.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
                     #data_c.append((endpoint,mpoint,itemid,uint,value,clock))
-                return JsonResponse({"status_code":200})
+                # print(datas)
+
+
             except:
                 return JsonResponse({"status_code":400})
+        print(datas)
+        cu.executemany(sql, datas)
+        cx.commit()
+        cu.close()
+        cx.close()
+        etime = int(time.time() * 1000)
+        dtime = etime - stime
+        print('total data 1000,last %s ms' % dtime)
+        return JsonResponse({"status_code": 200})
     else:
         return JsonResponse({"status_code":402})

@@ -1,23 +1,20 @@
 import requests
 import json
+import random
 
+datas = []
+for i in range(1000):
+    datas.append({
+      "endpoint":"127.0.0.1",
+      "mpoint":"",
+      "itemid":"mem_usage",
+      "uint":"%",
+      "value": 50+random.randint(1, 20),
+      "clock":1616830137+i,
+      "dtypes":"int"
+    })
+data ={"data":datas}
+print(data)
 
-data ={"data":[{
-  "endpoint":"127.0.0.1",
-  "mpoint":"/",
-  "itemid":"disk_usage",
-  "uint":"%",
-  "value":15,
-  "clock":123456754,
-  "dtypes":"int"
-},{
-  "endpoint":"127.0.0.1",
-  "mpoint":"/",
-  "itemid":"disk_usage",
-  "uint":"%",
-  "value":15,
-  "clock":123456754,
-  "dtypeq":""
-}]}
 resp = requests.post('http://127.0.0.1:8000/get_data/',json.dumps(data))
 
