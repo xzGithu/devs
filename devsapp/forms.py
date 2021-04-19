@@ -9,8 +9,8 @@ from devsapp import utils
 
 
 class query_form(forms.Form):
-    hostip = forms.ModelChoiceField(label='hosts',queryset=History_uint.objects.values_list("endpoint", flat=True).distinct())
-    metric = forms.ModelChoiceField(label='metrics',queryset=History_metric.objects.values_list("itemid", flat=True).distinct())
+    hostip = forms.ModelChoiceField(label='hosts',queryset=Items.objects.values_list("hostid", flat=True).distinct())
+    metric = forms.ModelChoiceField(label='metrics',queryset=Items.objects.values_list("itemid", flat=True).distinct())
 
 class command_apiform(forms.Form):
     hostip=forms.CharField()

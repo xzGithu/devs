@@ -761,7 +761,7 @@ def echo1(request,userid):
                     allconn[i].send(message)
 
 
-from devsapp.models import History,History_str,History_text,History_uint
+from devsapp.models import History,History_str,History_text,History_uint,hosts, Items
 def get_data(request):
     if request.method == 'POST':
         # print(type(request.body))
@@ -770,9 +770,18 @@ def get_data(request):
         import sqlite3
         cx = sqlite3.connect("D:/py-source/devs/db.sqlite3")
         cu = cx.cursor()
-        sql = 'insert into devsapp_history_uint(endpoint, mpoint, itemid, uint,value,clock) values(?,?,?,?,?,?)'
+        sql = 'insert into devsapp_history_uint(endpoint, mpoint, itemid_id, uint,value,clock) values(?,?,?,?,?,?)'
+        sqlstr = 'insert into devsapp_history_str(endpoint, mpoint, itemid_id, uint,value,clock) values(?,?,?,?,?,?)'
+        sqltext = 'insert into devsapp_history_text(endpoint, mpoint, itemid_id, uint,value,clock) values(?,?,?,?,?,?)'
+        sqle = 'insert into devsapp_history(endpoint, mpoint, itemid_id, uint,value,clock) values(?,?,?,?,?,?)'
+
         # print(json.loads(recvdata)["data"])
         datas=[]
+        datasstr = []
+        datastext = []
+        datase = []
+        endpoints_metric = []
+        # metric = []
         stime = int(time.time() * 1000)
         for data in json.loads(recvdata)["data"]:
             # print(data)
@@ -785,6 +794,7 @@ def get_data(request):
                 value = data["value"]
                 clock = data["clock"]
                 dtype = data["dtypes"]
+                endpoints_metric.append(endpoint+'-'+itemid)
 
                 if dtype=='int':
 
@@ -793,27 +803,40 @@ def get_data(request):
                         # History_uint.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
                     #data_int.append((endpoint,mpoint,itemid,uint,value,clock))
                 elif dtype=='str':
-                    History_str.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    datasstr.append((endpoint, mpoint, itemid, uint, value, clock))
+                    # History_str.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
                     #data_str.append((endpoint,mpoint,itemid,uint,value,clock))
                 elif dtype=='text':
-                    History_text.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    datastext.append((endpoint, mpoint, itemid, uint, value, clock))
+                    # History_text.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
                     #data_text.append((endpoint,mpoint,itemid,uint,value,clock))
                 else:
-                    History.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
+                    datase.append((endpoint, mpoint, itemid, uint, value, clock))
+                    # History.objects.create(endpoint=endpoint,mpoint=mpoint,itemid=itemid,uint=uint,value=value,clock=clock)
                     #data_c.append((endpoint,mpoint,itemid,uint,value,clock))
                 # print(datas)
-
-
             except:
                 return JsonResponse({"status_code":400})
-        print(datas)
+        # print(datas)
         cu.executemany(sql, datas)
+        cu.executemany(sqlstr, datasstr)
+        cu.executemany(sqltext, datastext)
+        cu.executemany(sqle, datase)
         cx.commit()
         cu.close()
         cx.close()
         etime = int(time.time() * 1000)
         dtime = etime - stime
+        endpoints_metric = set(endpoints_metric)
+
         print('total data 1000,last %s ms' % dtime)
+        print(endpoints_metric)
+        for i in endpoints_metric:
+            host=hosts.objects.get_or_create(hostid=i.split('-')[0])
+            print(host)
+            hostid=hosts.objects.values("id").filter(hostid=i.split('-')[0])
+            print(hostid[0]["id"])
+            metric = Items.objects.get_or_create(hostid_id=hostid[0]["id"], itemid=i.split('-')[1])
         return JsonResponse({"status_code": 200})
     else:
         return JsonResponse({"status_code":402})
