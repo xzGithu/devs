@@ -1,5 +1,5 @@
 alembic==0.9.9
-ansible==2.3.1.0
+ansible==2.9.20
 apyori==1.1.1
 asn1crypto==0.22.0
 attrs==16.3.0
