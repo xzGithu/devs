@@ -7,6 +7,11 @@ from django.utils.translation import ugettext as _
 from devsapp import utils
 
 
+
+class query_form(forms.Form):
+    hostip = forms.ModelChoiceField(label='hosts',queryset=Items.objects.values_list("hostid", flat=True).distinct())
+    metric = forms.ModelChoiceField(label='metrics',queryset=Items.objects.values_list("itemid", flat=True).distinct())
+
 class command_apiform(forms.Form):
     hostip=forms.CharField()
     command=forms.CharField()

@@ -263,9 +263,28 @@ class ScriptArgs(models.Model):
     args_value=models.CharField(max_length=100,default='')
     script=models.ForeignKey(Script,default=1,related_name='scriptargs')
 
+class hosts(models.Model):
+    hostid = models.CharField(max_length=32)
+    status = models.CharField(max_length=12)
+    hostname = models.CharField(max_length=32)
+    t_create = models.DateTimeField(auto_now=True)
+    t_modify = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.hostid
+
+class Items(models.Model):
+    itemid = models.CharField(max_length=32)
+    hostid = models.ForeignKey(hosts, max_length=32)
+    name = models.CharField(max_length=32)
+    value_type = models.CharField(max_length=16)
+    t_create = models.DateTimeField(auto_now=True)
+    t_modify = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.itemid
 
 class History(models.Model):
-    itemid = models.CharField(max_length=64)
+    itemid = models.ForeignKey(Items)
     clock = models.DateTimeField(auto_now=True)
     uint = models.CharField(max_length=10)
     value = models.CharField(max_length=10)
@@ -273,15 +292,24 @@ class History(models.Model):
     mpoint = models.CharField(max_length=32)
 
 class History_uint(models.Model):
-    itemid = models.CharField(max_length=64)
+    itemid = models.ForeignKey(Items)
     clock = models.DateTimeField(auto_now=True)
     uint = models.CharField(max_length=10)
     value = models.CharField(max_length=10)
     endpoint = models.CharField(max_length=32)
     mpoint = models.CharField(max_length=32)
 
-class History_str(models.Model):
+    def __str__(self):
+        return self.endpoint
+
+class History_metric(models.Model):
     itemid = models.CharField(max_length=64)
+    endpoint = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.itemid
+class History_str(models.Model):
+    itemid = models.ForeignKey(Items)
     clock = models.DateTimeField(auto_now=True)
     uint = models.CharField(max_length=10)
     value = models.CharField(max_length=10)
@@ -290,7 +318,7 @@ class History_str(models.Model):
 
 
 class History_text(models.Model):
-    itemid = models.CharField(max_length=64)
+    itemid = models.ForeignKey(Items, max_length=64)
     clock = models.DateTimeField(auto_now=True)
     uint = models.CharField(max_length=10)
     value = models.CharField(max_length=10)

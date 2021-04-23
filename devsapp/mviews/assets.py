@@ -1,5 +1,5 @@
 #coding:utf-8
-from devsapp.models import Assets,SSHInfo,ToolsScript
+from devsapp.models import Assets,SSHInfo,ToolsScript, hosts, Items
 from django.contrib.auth.models import User
 from django.shortcuts import render,redirect
 from django.http import JsonResponse
@@ -71,6 +71,16 @@ def lists(request,table):
         list_template = 'user/user_list.html'
         sub_title = '用户列表'
         page_title = '用户管理'
+    if table == 'monhost':
+        raw_data = hosts.objects.order_by('id')
+        list_template = 'asset/hostslist.html'
+        sub_title = '主机'
+        page_title = '主机列表'
+    if table == 'hostmetric':
+        raw_data = Items.objects.order_by('id')
+        list_template = 'asset/metriclist.html'
+        sub_title = '主机'
+        page_title = '指标列表'
     if request.method == 'GET':
         kwargs = {}
         query = ''
@@ -78,6 +88,9 @@ def lists(request,table):
             if key != 'csrfmiddlewaretoken' and key != 'page':
                 if key == 'node':
                     kwargs['node__node_name__contains'] = value
+                    query += '&' + key + '=' + value
+                elif key == 'hostid_id':
+                    kwargs['hostid__hostid__contains'] = value
                     query += '&' + key + '=' + value
                 else:
                     kwargs[key + '__contains'] = value
