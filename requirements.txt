@@ -6,7 +6,7 @@ attrs==16.3.0
 Automagica==1.0.11
 Automat==0.5.0
 AWSIoTPythonSDK==1.4.7
-Babel==2.6.0
+Babel==2.9.1
 backports-abc==0.5
 backports.functools-lru-cache==1.4
 baidu-aip==2.2.17.0
