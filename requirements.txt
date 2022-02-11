@@ -213,7 +213,7 @@ thulac==0.2.0
 tornado==5.0.1
 transitions==0.8.0
 twine==1.6.5
-Twisted==17.1.0
+Twisted==22.1.0
 unicodecsv==0.14.1
 Unidecode==1.0.22
 uno==0.3.3
