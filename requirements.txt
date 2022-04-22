@@ -149,7 +149,7 @@ PyMsgBox==1.0.7
 PyMySQL==0.7.11
 pyOpenSSL==16.2.0
 pyparsing==2.2.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pyperclip==1.7.0
 Pyphen==0.9.4
 pypiwin32==219
