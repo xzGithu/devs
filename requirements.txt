@@ -157,7 +157,7 @@ pypng==0.0.18
 PyQRCode==1.2.1
 PyRect==0.1.4
 PyScreeze==0.1.24
-pyspark==2.4.3
+pyspark==3.2.2
 pysphere==0.1.7
 pytesseract==0.2.0
 pytest==2.6.0
